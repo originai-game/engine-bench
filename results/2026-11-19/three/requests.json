@@ -1,0 +1,177 @@
+[
+  {
+    "path": "/index.html",
+    "status": 200,
+    "raw": 427,
+    "sent": 178,
+    "encoding": "br"
+  },
+  {
+    "path": "/assets/index-DjzBeMzd.js",
+    "status": 200,
+    "raw": 1312591,
+    "sent": 316116,
+    "encoding": "br"
+  },
+  {
+    "path": "/content/models/stall.glb",
+    "status": 200,
+    "raw": 4591860,
+    "sent": 4327310,
+    "encoding": "br"
+  },
+  {
+    "path": "/content/models/block-a.glb",
+    "status": 200,
+    "raw": 4245784,
+    "sent": 4020166,
+    "encoding": "br"
+  },
+  {
+    "path": "/content/models/block-b.glb",
+    "status": 200,
+    "raw": 4155564,
+    "sent": 3933028,
+    "encoding": "br"
+  },
+  {
+    "path": "/content/models/gate.glb",
+    "status": 200,
+    "raw": 2731416,
+    "sent": 2700407,
+    "encoding": "br"
+  },
+  {
+    "path": "/content/models/lantern.glb",
+    "status": 200,
+    "raw": 2290556,
+    "sent": 2262965,
+    "encoding": "br"
+  },
+  {
+    "path": "/content/models/courier.glb",
+    "status": 200,
+    "raw": 9168528,
+    "sent": 8888869,
+    "encoding": "br"
+  },
+  {
+    "path": "/content/models/bike.glb",
+    "status": 200,
+    "raw": 10303480,
+    "sent": 10095337,
+    "encoding": "br"
+  },
+  {
+    "path": "/content/models/ped_a.glb",
+    "status": 200,
+    "raw": 2188300,
+    "sent": 2114135,
+    "encoding": "br"
+  },
+  {
+    "path": "/content/models/ped_b.glb",
+    "status": 200,
+    "raw": 2459436,
+    "sent": 2373537,
+    "encoding": "br"
+  },
+  {
+    "path": "/content/models/ped_c.glb",
+    "status": 200,
+    "raw": 2380964,
+    "sent": 2300846,
+    "encoding": "br"
+  },
+  {
+    "path": "/content/textures/cobblestone_01_diff_1k.ktx2",
+    "status": 200,
+    "raw": 168517,
+    "sent": 168522,
+    "encoding": "br"
+  },
+  {
+    "path": "/content/textures/cobblestone_01_nor_gl_1k.ktx2",
+    "status": 200,
+    "raw": 945290,
+    "sent": 945295,
+    "encoding": "br"
+  },
+  {
+    "path": "/content/textures/cobblestone_01_arm_1k.ktx2",
+    "status": 200,
+    "raw": 840205,
+    "sent": 840210,
+    "encoding": "br"
+  },
+  {
+    "path": "/content/textures/brushed_concrete_diff_1k.ktx2",
+    "status": 200,
+    "raw": 156403,
+    "sent": 156408,
+    "encoding": "br"
+  },
+  {
+    "path": "/content/textures/brushed_concrete_nor_gl_1k.ktx2",
+    "status": 200,
+    "raw": 1028533,
+    "sent": 1028538,
+    "encoding": "br"
+  },
+  {
+    "path": "/content/textures/brushed_concrete_arm_1k.ktx2",
+    "status": 200,
+    "raw": 999712,
+    "sent": 999717,
+    "encoding": "br"
+  },
+  {
+    "path": "/content/textures/tower-windows.ktx2",
+    "status": 200,
+    "raw": 105339,
+    "sent": 105344,
+    "encoding": "br"
+  },
+  {
+    "path": "/content/textures/signs/ring.ktx2",
+    "status": 200,
+    "raw": 40473,
+    "sent": 39976,
+    "encoding": "br"
+  },
+  {
+    "path": "/content/textures/signs/bowl.ktx2",
+    "status": 200,
+    "raw": 31501,
+    "sent": 31137,
+    "encoding": "br"
+  },
+  {
+    "path": "/content/textures/signs/chevrons.ktx2",
+    "status": 200,
+    "raw": 52459,
+    "sent": 52006,
+    "encoding": "br"
+  },
+  {
+    "path": "/content/textures/signs/triangle.ktx2",
+    "status": 200,
+    "raw": 23721,
+    "sent": 23361,
+    "encoding": "br"
+  },
+  {
+    "path": "/basis/basis_transcoder.js",
+    "status": 200,
+    "raw": 57529,
+    "sent": 13699,
+    "encoding": "br"
+  },
+  {
+    "path": "/basis/basis_transcoder.wasm",
+    "status": 200,
+    "raw": 527333,
+    "sent": 203605,
+    "encoding": "br"
+  }
+]

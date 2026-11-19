@@ -6,7 +6,12 @@ engine through the og launcher) and **three.js r187 `WebGPURenderer`**. The
 same models and textures, camera path, lights and resolution; measured
 values only.
 
-RESULTS
+On this Mac, in Chrome's WebGPU backend, three.js's build is 36% smaller to
+download (47.9 MB vs. 74.9 MB brotli), reaches its first frame about 9x
+faster (1.0 s vs. 9.3 s), and runs the camera path about twice as fast per
+frame (43 ms vs. 87 ms median, 54 ms vs. 233 ms p95) — while drawing less of
+the scene (no rain, wet street, particles or tree; see Feature differences).
+Full numbers and raw data below.
 
 ## The scene: Night Shift
 
@@ -29,11 +34,16 @@ lights, 7 point lights, a shadowed spot and two cascaded directional lights),
 screen-space reflections, ambient occlusion, lit volumetric fog, bloom,
 eight skinned and animated walkers, and 4x MSAA at 2560 x 1440.
 
-Two things had to change in the Origin copy (`origin/night-shift`, see its
-README). Night Shift's HUD and font pack are removed: the HUD is a UI
-overlay, not the 3D scene, and on the 0.9.0 web host a game whose cooked
+Two things changed in the Origin copy (`origin/night-shift`, see its
+README). First, Night Shift's HUD and its font pack are removed. This is a
+UI-only change: the HUD is a 2D overlay (a minimap, a timer, a quest
+tracker), nothing in the 3D scene uses it, and the three.js page has no UI
+either. It was needed because on the 0.9.0 web host a game whose cooked
 bundle carries the `fonts/latin` font pack never draws its first frame in
-Chrome. The Last Light had the same problem. Its camera also flies the
+Chrome. With the HUD, `start` throws that the font "is still being
+fetched"; without the HUD, the frame waits forever. The Last Light hits the
+same bug. It is fixed in origin-engine after 0.9.0: pending font faces are
+tracked in `fonts_pending` (477c28851). Second, the camera flies the
 benchmark's path.
 
 ## What each engine draws
@@ -76,7 +86,22 @@ in places: full-detail meshes, and the GTAO depth and normal prepass.
 
 ## Results
 
-TABLE
+One cold run per engine, recorded 2026-11-19, canvas 2560 x 1440. Neither
+run was disturbed (`results/2026-11-19/summary.md` has the full figures,
+including load average and GPU share during each run).
+
+| Engine | Download (brotli) | Cold first frame | Frame time median | Frame time p95 | Frames on the path | Path wall time |
+|---|---|---|---|---|---|---|
+| Origin Engine 0.9.0 | 74.90 MB (124 requests) | 9334 ms | 87.2 ms | 232.6 ms | 438 | 44.2 s |
+| three.js r187 WebGPURenderer | 47.94 MB (25 requests) | 1046 ms | 43.3 ms | 53.8 ms | 452 | 20.0 s |
+
+Origin's path wall time is longer than its nominal 20 s because its
+simulation runs a fixed 60 Hz tick: when a frame is slow, the tick (and so
+the path) falls behind wall time rather than skipping simulation steps
+(see Method, Camera path). three.js's path follows the page's own clock, so
+it always takes 20 s regardless of frame rate; its frame-time figures over
+that fixed window are directly comparable to Origin's per-frame figures,
+but the two "path wall time" numbers are not comparable to each other.
 
 The same frame from each engine (the cover shot, the camera path's last
 frame), Origin Engine left, three.js right:
@@ -86,9 +111,30 @@ frame), Origin Engine left, three.js right:
 ## Method
 
 - **Machine**: MacBook Pro (Mac16,8), Apple M4 Pro (12-core CPU, 16-core
-  GPU), 24 GB, macOS 27.2 (26B5091g), on AC power. Before each run the
-  harness waits until the one-minute load average has stayed under 3 for a
-  minute, then records the load and the busiest processes in `run.json`.
+  GPU), 24 GB, macOS 27.2 (26B5091g), on AC power. The Mac is shared with
+  other work (other agents' builds and browser tests come and go), and a few
+  processes stayed busy on it for days, about 2.5 of its 12 cores: a Grok
+  Bot helper and `fseventsd` at a full core each and a long-running og
+  native run at a third. These could not be stopped for the benchmark.
+  Before each run the harness waits until the one-minute load average has
+  stayed under 5 for a minute (`QUIET_LOAD`), records the load and the
+  busiest processes, and samples the load every second while Chrome runs
+  (`run.json`, `machine`). A run during which the load went past 10 is
+  marked disturbed and repeated, its files kept as `<engine>-disturbed-<n>`.
+  The CPU load average does not see work done only on the GPU (a native
+  game window, a Safari WebGPU test), so the harness also reads each
+  process's GPU time from `IOAccelerator`/`AGXDeviceUserClient`
+  (`ioreg`) before and during the run (`machine.gpuShareBefore`,
+  `gpuShareDuringRun`, seconds of GPU time per second); a run where some
+  process other than Chrome gained more than 0.1 s/s of GPU time during the
+  run than it already held before it (`DISTURBED_GPU`) is marked disturbed.
+  One process on this Mac, WeChat's `XPlayer` helper, draws a steady
+  background GPU load (observed 0.4-0.8 s/s, varying with window/compositor
+  activity rather than with this benchmark) that is not a real intrusion;
+  it is excluded from the check by name, same as Chrome and `WindowServer`.
+  Two runs were discarded for a genuine GPU intrusion: a native build of
+  the same scene running in another thread's desktop-shell test pinned the
+  GPU during an Origin run (kept as `.work/discarded/`, not committed).
 - **Browser**: Google Chrome 157.0.8103.79 (the installed Chrome, WebGPU on
   Metal), headed, started by the harness with a new empty profile for every
   run (`--user-data-dir` in a temporary directory) and no extensions, sync,
@@ -119,8 +165,8 @@ frame), Origin Engine left, three.js right:
 - **Frame time**: the interval between consecutive canvas frames
   (`getCurrentTexture` in the context that draws: Origin's engine Worker,
   three.js's page) while the camera flies the path, median and 95th
-  percentile. Chrome's frame rate is not unlocked: the display runs at
-  60 Hz, so 16.7 ms is the floor.
+  percentile. Chrome's frame rate is not unlocked (no vsync or frame-rate
+  flags); both engines stay well above the display's refresh interval.
 - **Camera path**: `origin/night-shift/src/camera-path.ts`, 20 seconds of a
   Catmull-Rom spline through six keys, from the showcase's cover shot down
   the alley, up at the towers, round the courier and back to the cover shot.
@@ -129,8 +175,13 @@ frame), Origin Engine left, three.js right:
   simulation starts at tick 0) and the three.js page's `__benchStart()` is
   called. The path ends when the engine's own clock reaches 20 s
   (Origin's tick / 60, three.js's page clock).
-- **Runs**: one per engine, as asked. A run would be repeated only when it
-  was clearly disturbed; none was.
+- **Runs**: one recorded run per engine, repeated only when disturbed (see
+  Machine). Each recorded run is the engine's second load of its build:
+  macOS keeps compiled Metal shaders in a cache outside Chrome's profile,
+  shared by every Chrome, so `run-all.sh` loads each page once to its first
+  frame (`--warmup`, nothing recorded) before the recorded run. The Chrome
+  profile is new for every load, so Chrome's own caches (HTTP, its GPU
+  shader cache) are cold; the OS's Metal cache holds both engines' shaders.
 
 Everything a run measured is kept in `results/<date>/<engine>/`:
 `run.json` (every value above, the machine, Chrome's flags and console),

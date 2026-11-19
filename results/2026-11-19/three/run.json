@@ -1,0 +1,344 @@
+{
+  "engine": "three",
+  "url": "http://127.0.0.1:8787/",
+  "root": "/Volumes/app/engine-bench/three/dist",
+  "machine": {
+    "date": "2026-11-19T21:47:32.081Z",
+    "host": "fan的MacBook Pro",
+    "model": "Mac16,8",
+    "cpu": "Apple M4 Pro",
+    "memoryBytes": 25769803776,
+    "macos": "27.2 26B5091g",
+    "power": "Now drawing from 'AC Power'",
+    "loadAverage": "{ 2.83 3.64 5.66 }",
+    "topProcesses": [
+      "%CPU COMM",
+      "100.0 /Applications/Grok Bot.app/Contents/Frameworks/Grok Bot Helper.app/Contents/MacOS/Grok Bot Helper",
+      " 34.2 bun",
+      "  1.9 /usr/sbin/coreaudiod",
+      "  1.8 /Applications/Slack.app/Contents/Frameworks/Slack Helper.app/Contents/MacOS/Slack Helper",
+      "  1.6 /Applications/TencentMeeting.app/Contents/MacOS/TencentMeeting",
+      "  1.2 /Applications/Slack.app/Contents/Frameworks/Slack Helper (Renderer).app/Contents/MacOS/Slack Helper (Renderer)",
+      "  1.2 /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/FSEvents.framework/Versions/A/Support/fseventsd"
+    ],
+    "waitedForQuietMs": 61939.19970703125,
+    "gpuUtilizationBefore": 56,
+    "gpuShareBefore": {
+      "XPlayer (49700)": 0.45
+    },
+    "loadDuringRun": {
+      "max": 3.03,
+      "samples": [
+        [
+          1795124921196,
+          2.84
+        ],
+        [
+          1795124922197,
+          2.84
+        ],
+        [
+          1795124923198,
+          2.85
+        ],
+        [
+          1795124924198,
+          2.85
+        ],
+        [
+          1795124925199,
+          2.85
+        ],
+        [
+          1795124926200,
+          2.85
+        ],
+        [
+          1795124927201,
+          2.85
+        ],
+        [
+          1795124928202,
+          3.02
+        ],
+        [
+          1795124929202,
+          3.02
+        ],
+        [
+          1795124930202,
+          3.02
+        ],
+        [
+          1795124931203,
+          3.02
+        ],
+        [
+          1795124932203,
+          3.02
+        ],
+        [
+          1795124933203,
+          2.86
+        ],
+        [
+          1795124934204,
+          2.86
+        ],
+        [
+          1795124935205,
+          2.86
+        ],
+        [
+          1795124936205,
+          2.86
+        ],
+        [
+          1795124937206,
+          2.86
+        ],
+        [
+          1795124938207,
+          3.03
+        ],
+        [
+          1795124939208,
+          3.03
+        ],
+        [
+          1795124940209,
+          3.03
+        ],
+        [
+          1795124941209,
+          3.03
+        ],
+        [
+          1795124942210,
+          3.03
+        ],
+        [
+          1795124943210,
+          2.95
+        ],
+        [
+          1795124944210,
+          2.95
+        ],
+        [
+          1795124945211,
+          2.95
+        ],
+        [
+          1795124946212,
+          2.95
+        ],
+        [
+          1795124947212,
+          2.95
+        ],
+        [
+          1795124948213,
+          3.03
+        ],
+        [
+          1795124949214,
+          3.03
+        ],
+        [
+          1795124950215,
+          3.03
+        ],
+        [
+          1795124951216,
+          3.03
+        ]
+      ]
+    },
+    "gpuShareDuringRun": {
+      "XPlayer (49700)": 0.59,
+      "WindowServer (426)": 0.017
+    }
+  },
+  "chrome": {
+    "binary": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+    "version": "Chrome/157.0.8103.79",
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36",
+    "flags": [
+      "--no-first-run",
+      "--no-default-browser-check",
+      "--disable-extensions",
+      "--disable-component-update",
+      "--disable-background-networking",
+      "--disable-sync",
+      "--disable-default-apps",
+      "--disable-features=Translate,MediaRouter,OptimizationHints",
+      "--disable-background-timer-throttling",
+      "--disable-renderer-backgrounding",
+      "--disable-backgrounding-occluded-windows",
+      "--window-size=1280,920",
+      "--window-position=0,0",
+      "about:blank"
+    ]
+  },
+  "adapter": {
+    "vendor": "apple",
+    "architecture": "metal-3",
+    "device": "",
+    "description": ""
+  },
+  "view": {
+    "width": 1280,
+    "height": 720,
+    "dpr": 2
+  },
+  "download": {
+    "brotliBytes": 47940712,
+    "rawBytes": 50805921,
+    "requests": 25,
+    "requestsBeforePath": 25,
+    "notBrotli": [],
+    "notFound": []
+  },
+  "firstFrame": {
+    "timeOrigin": 1795124920782.44,
+    "navigatedAt": 1795124920780.6394,
+    "firstCanvasFrameMs": 1046.47998046875,
+    "markMs": 938.6200003623962,
+    "presentedMs": 1046.47998046875,
+    "framesBeforeIt": 0,
+    "context": "page"
+  },
+  "pageMarks": [
+    [
+      "bench:first-frame",
+      938.6200003623962
+    ]
+  ],
+  "frameTime": {
+    "pathSeconds": 20,
+    "wallMs": 20003.053955078125,
+    "frames": 452,
+    "medianMs": 43.294921875,
+    "p95Ms": 53.80517578125,
+    "meanMs": 44.22927944411724,
+    "maxMs": 59.64013671875,
+    "resolution": [
+      2560,
+      1440
+    ]
+  },
+  "workers": [
+    "blob:http://127.0.0.1:8787/469f265b-bf23-44b4-afff-bb4bed4a02a2",
+    "blob:http://127.0.0.1:8787/469f265b-bf23-44b4-afff-bb4bed4a02a2",
+    "blob:http://127.0.0.1:8787/469f265b-bf23-44b4-afff-bb4bed4a02a2",
+    "blob:http://127.0.0.1:8787/469f265b-bf23-44b4-afff-bb4bed4a02a2"
+  ],
+  "console": [
+    "page warning: THREE.TSL: Declaration name 'shadowValue' of 'vec4' is a reserved keyword or already in use. Renamed to 'shadowValue_1'. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces.",
+    "page warning: THREE.TSL: Declaration name 'cascade' of 'vec2' is a reserved keyword or already in use. Renamed to 'cascade_1'. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces.",
+    "page warning: THREE.TSL: Declaration name 'cascades' of 'buffer' is a reserved keyword or already in use. Renamed to 'cascades_1'. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces.",
+    "page warning: THREE.TSL: Declaration name 'shadowFar' of 'float' is a reserved keyword or already in use. Renamed to 'shadowFar_1'. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces.",
+    "page warning: THREE.TSL: Declaration name 'linearDepth' of 'float' is a reserved keyword or already in use. Renamed to 'linearDepth_1'. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces.",
+    "page warning: THREE.TSL: Declaration name 'shadowValue' of 'vec4' is a reserved keyword or already in use. Renamed to 'shadowValue_1'. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces.",
+    "page warning: THREE.TSL: Declaration name 'cascade' of 'vec2' is a reserved keyword or already in use. Renamed to 'cascade_1'. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces.",
+    "page warning: THREE.TSL: Declaration name 'cascades' of 'buffer' is a reserved keyword or already in use. Renamed to 'cascades_1'. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces.",
+    "page warning: THREE.TSL: Declaration name 'shadowFar' of 'float' is a reserved keyword or already in use. Renamed to 'shadowFar_1'. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces.",
+    "page warning: THREE.TSL: Declaration name 'linearDepth' of 'float' is a reserved keyword or already in use. Renamed to 'linearDepth_1'. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces.",
+    "page warning: THREE.TSL: Declaration name 'shadowValue' of 'vec4' is a reserved keyword or already in use. Renamed to 'shadowValue_1'. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces.",
+    "page warning: THREE.TSL: Declaration name 'cascade' of 'vec2' is a reserved keyword or already in use. Renamed to 'cascade_1'. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces.",
+    "page warning: THREE.TSL: Declaration name 'cascades' of 'buffer' is a reserved keyword or already in use. Renamed to 'cascades_1'. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces.",
+    "page warning: THREE.TSL: Declaration name 'shadowFar' of 'float' is a reserved keyword or already in use. Renamed to 'shadowFar_1'. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces.",
+    "page warning: THREE.TSL: Declaration name 'linearDepth' of 'float' is a reserved keyword or already in use. Renamed to 'linearDepth_1'. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces.",
+    "page warning: THREE.TSL: Declaration name 'shadowValue' of 'vec4' is a reserved keyword or already in use. Renamed to 'shadowValue_1'. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces.",
+    "page warning: THREE.TSL: Declaration name 'cascade' of 'vec2' is a reserved keyword or already in use. Renamed to 'cascade_1'. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces.",
+    "page warning: THREE.TSL: Declaration name 'cascades' of 'buffer' is a reserved keyword or already in use. Renamed to 'cascades_1'. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces.",
+    "page warning: THREE.TSL: Declaration name 'shadowFar' of 'float' is a reserved keyword or already in use. Renamed to 'shadowFar_1'. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces.",
+    "page warning: THREE.TSL: Declaration name 'linearDepth' of 'float' is a reserved keyword or already in use. Renamed to 'linearDepth_1'. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces.",
+    "page warning: THREE.TSL: Declaration name 'shadowValue' of 'vec4' is a reserved keyword or already in use. Renamed to 'shadowValue_1'. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces.",
+    "page warning: THREE.TSL: Declaration name 'cascade' of 'vec2' is a reserved keyword or already in use. Renamed to 'cascade_1'. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces.",
+    "page warning: THREE.TSL: Declaration name 'cascades' of 'buffer' is a reserved keyword or already in use. Renamed to 'cascades_1'. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces.",
+    "page warning: THREE.TSL: Declaration name 'shadowFar' of 'float' is a reserved keyword or already in use. Renamed to 'shadowFar_1'. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces.",
+    "page warning: THREE.TSL: Declaration name 'linearDepth' of 'float' is a reserved keyword or already in use. Renamed to 'linearDepth_1'. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces.",
+    "page warning: THREE.TSL: Declaration name 'shadowValue' of 'vec4' is a reserved keyword or already in use. Renamed to 'shadowValue_1'. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces.",
+    "page warning: THREE.TSL: Declaration name 'cascade' of 'vec2' is a reserved keyword or already in use. Renamed to 'cascade_1'. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces.",
+    "page warning: THREE.TSL: Declaration name 'cascades' of 'buffer' is a reserved keyword or already in use. Renamed to 'cascades_1'. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces.",
+    "page warning: THREE.TSL: Declaration name 'shadowFar' of 'float' is a reserved keyword or already in use. Renamed to 'shadowFar_1'. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces.",
+    "page warning: THREE.TSL: Declaration name 'linearDepth' of 'float' is a reserved keyword or already in use. Renamed to 'linearDepth_1'. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces.",
+    "page warning: THREE.TSL: Declaration name 'shadowValue' of 'vec4' is a reserved keyword or already in use. Renamed to 'shadowValue_1'. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces.",
+    "page warning: THREE.TSL: Declaration name 'cascade' of 'vec2' is a reserved keyword or already in use. Renamed to 'cascade_1'. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces.",
+    "page warning: THREE.TSL: Declaration name 'cascades' of 'buffer' is a reserved keyword or already in use. Renamed to 'cascades_1'. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces.",
+    "page warning: THREE.TSL: Declaration name 'shadowFar' of 'float' is a reserved keyword or already in use. Renamed to 'shadowFar_1'. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces.",
+    "page warning: THREE.TSL: Declaration name 'linearDepth' of 'float' is a reserved keyword or already in use. Renamed to 'linearDepth_1'. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces.",
+    "page warning: THREE.TSL: Declaration name 'shadowValue' of 'vec4' is a reserved keyword or already in use. Renamed to 'shadowValue_1'. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces.",
+    "page warning: THREE.TSL: Declaration name 'cascade' of 'vec2' is a reserved keyword or already in use. Renamed to 'cascade_1'. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces.",
+    "page warning: THREE.TSL: Declaration name 'cascades' of 'buffer' is a reserved keyword or already in use. Renamed to 'cascades_1'. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces.",
+    "page warning: THREE.TSL: Declaration name 'shadowFar' of 'float' is a reserved keyword or already in use. Renamed to 'shadowFar_1'. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces.",
+    "page warning: THREE.TSL: Declaration name 'linearDepth' of 'float' is a reserved keyword or already in use. Renamed to 'linearDepth_1'. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces.",
+    "page warning: THREE.TSL: Declaration name 'shadowValue' of 'vec4' is a reserved keyword or already in use. Renamed to 'shadowValue_1'. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces.",
+    "page warning: THREE.TSL: Declaration name 'cascade' of 'vec2' is a reserved keyword or already in use. Renamed to 'cascade_1'. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces.",
+    "page warning: THREE.TSL: Declaration name 'cascades' of 'buffer' is a reserved keyword or already in use. Renamed to 'cascades_1'. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces.",
+    "page warning: THREE.TSL: Declaration name 'shadowFar' of 'float' is a reserved keyword or already in use. Renamed to 'shadowFar_1'. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces.",
+    "page warning: THREE.TSL: Declaration name 'linearDepth' of 'float' is a reserved keyword or already in use. Renamed to 'linearDepth_1'. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces.",
+    "page warning: THREE.TSL: Declaration name 'shadowValue' of 'vec4' is a reserved keyword or already in use. Renamed to 'shadowValue_1'. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces.",
+    "page warning: THREE.TSL: Declaration name 'cascade' of 'vec2' is a reserved keyword or already in use. Renamed to 'cascade_1'. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces.",
+    "page warning: THREE.TSL: Declaration name 'cascades' of 'buffer' is a reserved keyword or already in use. Renamed to 'cascades_1'. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces.",
+    "page warning: THREE.TSL: Declaration name 'shadowFar' of 'float' is a reserved keyword or already in use. Renamed to 'shadowFar_1'. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces.",
+    "page warning: THREE.TSL: Declaration name 'linearDepth' of 'float' is a reserved keyword or already in use. Renamed to 'linearDepth_1'. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces.",
+    "page warning: THREE.TSL: Declaration name 'shadowValue' of 'vec4' is a reserved keyword or already in use. Renamed to 'shadowValue_1'. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces.",
+    "page warning: THREE.TSL: Declaration name 'cascade' of 'vec2' is a reserved keyword or already in use. Renamed to 'cascade_1'. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces.",
+    "page warning: THREE.TSL: Declaration name 'cascades' of 'buffer' is a reserved keyword or already in use. Renamed to 'cascades_1'. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces.",
+    "page warning: THREE.TSL: Declaration name 'shadowFar' of 'float' is a reserved keyword or already in use. Renamed to 'shadowFar_1'. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces.",
+    "page warning: THREE.TSL: Declaration name 'linearDepth' of 'float' is a reserved keyword or already in use. Renamed to 'linearDepth_1'. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces.",
+    "page warning: THREE.TSL: Declaration name 'shadowValue' of 'vec4' is a reserved keyword or already in use. Renamed to 'shadowValue_1'. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces.",
+    "page warning: THREE.TSL: Declaration name 'cascade' of 'vec2' is a reserved keyword or already in use. Renamed to 'cascade_1'. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces.",
+    "page warning: THREE.TSL: Declaration name 'cascades' of 'buffer' is a reserved keyword or already in use. Renamed to 'cascades_1'. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces.",
+    "page warning: THREE.TSL: Declaration name 'shadowFar' of 'float' is a reserved keyword or already in use. Renamed to 'shadowFar_1'. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces.",
+    "page warning: THREE.TSL: Declaration name 'linearDepth' of 'float' is a reserved keyword or already in use. Renamed to 'linearDepth_1'. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces.",
+    "page warning: THREE.TSL: Declaration name 'shadowValue' of 'vec4' is a reserved keyword or already in use. Renamed to 'shadowValue_1'. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces.",
+    "page warning: THREE.TSL: Declaration name 'cascade' of 'vec2' is a reserved keyword or already in use. Renamed to 'cascade_1'. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces.",
+    "page warning: THREE.TSL: Declaration name 'cascades' of 'buffer' is a reserved keyword or already in use. Renamed to 'cascades_1'. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces.",
+    "page warning: THREE.TSL: Declaration name 'shadowFar' of 'float' is a reserved keyword or already in use. Renamed to 'shadowFar_1'. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces.",
+    "page warning: THREE.TSL: Declaration name 'linearDepth' of 'float' is a reserved keyword or already in use. Renamed to 'linearDepth_1'. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces.",
+    "page warning: THREE.TSL: Declaration name 'shadowValue' of 'vec4' is a reserved keyword or already in use. Renamed to 'shadowValue_1'. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces.",
+    "page warning: THREE.TSL: Declaration name 'cascade' of 'vec2' is a reserved keyword or already in use. Renamed to 'cascade_1'. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces.",
+    "page warning: THREE.TSL: Declaration name 'cascades' of 'buffer' is a reserved keyword or already in use. Renamed to 'cascades_1'. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces.",
+    "page warning: THREE.TSL: Declaration name 'shadowFar' of 'float' is a reserved keyword or already in use. Renamed to 'shadowFar_1'. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces.",
+    "page warning: THREE.TSL: Declaration name 'linearDepth' of 'float' is a reserved keyword or already in use. Renamed to 'linearDepth_1'. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces.",
+    "page warning: THREE.TSL: Declaration name 'shadowValue' of 'vec4' is a reserved keyword or already in use. Renamed to 'shadowValue_1'. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces.",
+    "page warning: THREE.TSL: Declaration name 'cascade' of 'vec2' is a reserved keyword or already in use. Renamed to 'cascade_1'. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces.",
+    "page warning: THREE.TSL: Declaration name 'cascades' of 'buffer' is a reserved keyword or already in use. Renamed to 'cascades_1'. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces.",
+    "page warning: THREE.TSL: Declaration name 'shadowFar' of 'float' is a reserved keyword or already in use. Renamed to 'shadowFar_1'. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces.",
+    "page warning: THREE.TSL: Declaration name 'linearDepth' of 'float' is a reserved keyword or already in use. Renamed to 'linearDepth_1'. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces.",
+    "page warning: THREE.TSL: Declaration name 'shadowValue' of 'vec4' is a reserved keyword or already in use. Renamed to 'shadowValue_1'. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces.",
+    "page warning: THREE.TSL: Declaration name 'cascade' of 'vec2' is a reserved keyword or already in use. Renamed to 'cascade_1'. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces.",
+    "page warning: THREE.TSL: Declaration name 'cascades' of 'buffer' is a reserved keyword or already in use. Renamed to 'cascades_1'. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces.",
+    "page warning: THREE.TSL: Declaration name 'shadowFar' of 'float' is a reserved keyword or already in use. Renamed to 'shadowFar_1'. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces.",
+    "page warning: THREE.TSL: Declaration name 'linearDepth' of 'float' is a reserved keyword or already in use. Renamed to 'linearDepth_1'. Stack trace not available. Enable \"THREE.Node.captureStackTrace\" to capture stack traces.",
+    "page error: THREE.WebGPURenderer: Render pipeline creation failed (renderPipeline_Material_0_20): [Invalid PipelineLayout (unlabeled)] is invalid due to a previous error.\n - While calling [Device].CreateRenderPipeline([RenderPipelineDescriptor \"\"renderPipeline_Material_0_20\"\"]).\n",
+    "page error: THREE.WebGPURenderer: Uncaptured WebGPU GPUValidationError: The number of sampled textures (17) in the Fragment stage exceeds the maximum per-stage limit (16). This adapter supports a higher maxSampledTexturesPerShaderStage of 48, which can be specified in requiredLimits when calling requestDevice(). Limits differ by hardware, so always check the adapter limits prior to requesting a higher limit.\n - While validating binding counts\n - While validating [BindGroupLayoutDescriptor]\n - Wh",
+    "page error: THREE.WebGPURenderer: Uncaptured WebGPU GPUValidationError: [Invalid BindGroupLayout (unlabeled)] is invalid due to a previous error.\n - While validating [BindGroupDescriptor \"\"bindGroup_object\"\"] against [Invalid BindGroupLayout (unlabeled)]\n - While calling [Device].CreateBindGroup([BindGroupDescriptor \"\"bindGroup_object\"\"]).\n",
+    "page error: THREE.WebGPURenderer: Uncaptured WebGPU GPUValidationError: [Invalid BindGroupLayout (unlabeled)] is invalid due to a previous error.\n - While calling [Device].CreatePipelineLayout([PipelineLayoutDescriptor]).\n",
+    "page error: THREE.WebGPURenderer: Uncaptured WebGPU GPUValidationError: [Invalid BindGroupLayout (unlabeled)] is invalid due to a previous error.\n - While validating [BindGroupDescriptor \"\"bindGroup_object\"\"] against [Invalid BindGroupLayout (unlabeled)]\n - While calling [Device].CreateBindGroup([BindGroupDescriptor \"\"bindGroup_object\"\"]).\n",
+    "page error: THREE.WebGPURenderer: Uncaptured WebGPU GPUValidationError: [Invalid BindGroupLayout (unlabeled)] is invalid due to a previous error.\n - While validating [BindGroupDescriptor \"\"bindGroup_object\"\"] against [Invalid BindGroupLayout (unlabeled)]\n - While calling [Device].CreateBindGroup([BindGroupDescriptor \"\"bindGroup_object\"\"]).\n",
+    "page error: THREE.WebGPURenderer: Uncaptured WebGPU GPUValidationError: [Invalid BindGroupLayout (unlabeled)] is invalid due to a previous error.\n - While validating [BindGroupDescriptor \"\"bindGroup_object\"\"] against [Invalid BindGroupLayout (unlabeled)]\n - While calling [Device].CreateBindGroup([BindGroupDescriptor \"\"bindGroup_object\"\"]).\n",
+    "page error: THREE.WebGPURenderer: Uncaptured WebGPU GPUValidationError: [Invalid BindGroupLayout (unlabeled)] is invalid due to a previous error.\n - While validating [BindGroupDescriptor \"\"bindGroup_object\"\"] against [Invalid BindGroupLayout (unlabeled)]\n - While calling [Device].CreateBindGroup([BindGroupDescriptor \"\"bindGroup_object\"\"]).\n",
+    "page error: THREE.WebGPURenderer: Uncaptured WebGPU GPUValidationError: [Invalid RenderPipeline \"renderPipeline_Material_0_20\"] is invalid due to a previous error.\n - While encoding [RenderPassEncoder (unlabeled)].SetPipeline([Invalid RenderPipeline \"renderPipeline_Material_0_20\"]).\n - While finishing [CommandEncoder \"renderContext_4\"].\n",
+    "page error: THREE.WebGPURenderer: Uncaptured WebGPU GPUValidationError: [Invalid CommandBuffer from CommandEncoder \"renderContext_4\"] is invalid due to a previous error.\n - While calling [Queue].Submit([[Invalid CommandBuffer from CommandEncoder \"renderContext_4\"]])\n",
+    "page error: THREE.WebGPURenderer: Render pipeline creation failed (renderPipeline_Material_0_20): [Invalid PipelineLayout (unlabeled)] is invalid due to a previous error.\n - While calling [Device].CreateRenderPipeline([RenderPipelineDescriptor \"\"renderPipeline_Material_0_20\"\"]).\n",
+    "page error: THREE.WebGPURenderer: Uncaptured WebGPU GPUValidationError: [Invalid BindGroupLayout (unlabeled)] is invalid due to a previous error.\n - While validating [BindGroupDescriptor \"\"bindGroup_object\"\"] against [Invalid BindGroupLayout (unlabeled)]\n - While calling [Device].CreateBindGroup([BindGroupDescriptor \"\"bindGroup_object\"\"]).\n",
+    "page error: THREE.WebGPURenderer: Uncaptured WebGPU GPUValidationError: [Invalid BindGroupLayout (unlabeled)] is invalid due to a previous error.\n - While calling [Device].CreatePipelineLayout([PipelineLayoutDescriptor]).\n",
+    "page error: THREE.WebGPURenderer: Uncaptured WebGPU GPUValidationError: [Invalid BindGroupLayout (unlabeled)] is invalid due to a previous error.\n - While validating [BindGroupDescriptor \"\"bindGroup_object\"\"] against [Invalid BindGroupLayout (unlabeled)]\n - While calling [Device].CreateBindGroup([BindGroupDescriptor \"\"bindGroup_object\"\"]).\n",
+    "page error: THREE.WebGPURenderer: Uncaptured WebGPU GPUValidationError: [Invalid BindGroupLayout (unlabeled)] is invalid due to a previous error.\n - While validating [BindGroupDescriptor \"\"bindGroup_object\"\"] against [Invalid BindGroupLayout (unlabeled)]\n - While calling [Device].CreateBindGroup([BindGroupDescriptor \"\"bindGroup_object\"\"]).\n",
+    "page error: THREE.WebGPURenderer: Uncaptured WebGPU GPUValidationError: [Invalid BindGroupLayout (unlabeled)] is invalid due to a previous error.\n - While validating [BindGroupDescriptor \"\"bindGroup_object\"\"] against [Invalid BindGroupLayout (unlabeled)]\n - While calling [Device].CreateBindGroup([BindGroupDescriptor \"\"bindGroup_object\"\"]).\n",
+    "page error: THREE.WebGPURenderer: Uncaptured WebGPU GPUValidationError: [Invalid BindGroupLayout (unlabeled)] is invalid due to a previous error.\n - While validating [BindGroupDescriptor \"\"bindGroup_object\"\"] against [Invalid BindGroupLayout (unlabeled)]\n - While calling [Device].CreateBindGroup([BindGroupDescriptor \"\"bindGroup_object\"\"]).\n",
+    "page error: THREE.WebGPURenderer: Uncaptured WebGPU GPUValidationError: [Invalid RenderPipeline \"renderPipeline_Material_0_20\"] is invalid due to a previous error.\n - While encoding [RenderPassEncoder (unlabeled)].SetPipeline([Invalid RenderPipeline \"renderPipeline_Material_0_20\"]).\n - While finishing [CommandEncoder \"renderContext_2\"].\n",
+    "page error: THREE.WebGPURenderer: Uncaptured WebGPU GPUValidationError: [Invalid CommandBuffer from CommandEncoder \"renderContext_2\"] is invalid due to a previous error.\n - While calling [Queue].Submit([[Invalid CommandBuffer from CommandEncoder \"renderContext_2\"]])\n",
+    "page error: THREE.WebGPURenderer: Uncaptured WebGPU GPUValidationError: [Invalid RenderPipeline \"renderPipeline_Material_0_20\"] is invalid due to a previous error.\n - While encoding [RenderPassEncoder (unlabeled)].SetPipeline([Invalid RenderPipeline \"renderPipeline_Material_0_20\"]).\n - While finishing [CommandEncoder \"renderContext_4\"].\n",
+    "page error: THREE.WebGPURenderer: Uncaptured WebGPU GPUValidationError: [Invalid CommandBuffer from CommandEncoder \"renderContext_4\"] is invalid due to a previous error.\n - While calling [Queue].Submit([[Invalid CommandBuffer from CommandEncoder \"renderContext_4\"]])\n",
+    "page error: THREE.WebGPURenderer: Uncaptured WebGPU GPUValidationError: [Invalid RenderPipeline \"renderPipeline_Material_0_20\"] is invalid due to a previous error.\n - While encoding [RenderPassEncoder (unlabeled)].SetPipeline([Invalid RenderPipeline \"renderPipeline_Material_0_20\"]).\n - While finishing [CommandEncoder \"renderContext_2\"].\n",
+    "page error: THREE.WebGPURenderer: Uncaptured WebGPU GPUValidationError: [Invalid CommandBuffer from CommandEncoder \"renderContext_2\"] is invalid due to a previous error.\n - While calling [Queue].Submit([[Invalid CommandBuffer from CommandEncoder \"renderContext_2\"]])\n",
+    "page error: THREE.WebGPURenderer: Uncaptured WebGPU GPUValidationError: [Invalid RenderPipeline \"renderPipeline_Material_0_20\"] is invalid due to a previous error.\n - While encoding [RenderPassEncoder (unlabeled)].SetPipeline([Invalid RenderPipeline \"renderPipeline_Material_0_20\"]).\n - While finishing [CommandEncoder \"renderContext_2\"].\n",
+    "page error: THREE.WebGPURenderer: Uncaptured WebGPU GPUValidationError: [Invalid CommandBuffer from CommandEncoder \"renderContext_2\"] is invalid due to a previous error.\n - While calling [Queue].Submit([[Invalid CommandBuffer from CommandEncoder \"renderContext_2\"]])\n"
+  ]
+}

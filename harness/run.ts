@@ -89,24 +89,57 @@ await fetch(`${base}/__reset`);
 
 // --- a quiet machine ---------------------------------------------------------
 // The run waits until the one-minute load average has been under QUIET_LOAD
-// (default 3) for a minute, so other work on the machine (builds, other
-// agents) does not run alongside it; it records what it saw.
-const QUIET_LOAD = warmup ? Infinity : Number(process.env.QUIET_LOAD ?? 3);
+// (default 5) for a minute, so other work on the machine (builds, other
+// agents) does not run alongside it; it records what it saw. The default
+// leaves room for the processes that stayed busy on the benchmark Mac for
+// days (about 2.5 cores of 12; README, Method).
+const QUIET_LOAD = warmup ? Infinity : Number(process.env.QUIET_LOAD ?? 5);
 const load1 = () => Number(sh("sysctl -n vm.loadavg").replace(/[{}]/g, "").trim().split(/\s+/)[0]);
+// The load average does not see another program drawing on the GPU (a native
+// game, a Safari test), so the GPU's own utilization (IOAccelerator "Device
+// Utilization %") must also stay under QUIET_GPU (default 10) for that minute.
+const QUIET_GPU = warmup ? Infinity : Number(process.env.QUIET_GPU ?? 10);
+// GPU time per process (AGX user clients' accumulatedGPUTime, ns), so run.json
+// shows who else drew on the GPU during the run.
+const gpuTimes = () => {
+  const out: Record<string, number> = {};
+  let who = "";
+  for (const line of sh("ioreg -l -w0 -c AGXDeviceUserClient | grep -E 'IOUserClientCreator|accumulatedGPUTime'").split("\n")) {
+    const c = line.match(/"IOUserClientCreator" = "pid (\d+), ([^"]*)"/);
+    if (c) who = `${c[2]} (${c[1]})`;
+    const t = line.match(/"accumulatedGPUTime"=(\d+)/);
+    if (t && who) out[who] = (out[who] ?? 0) + Number(t[1]);
+  }
+  return out;
+};
+const gpuShare = (a: Record<string, number>, b: Record<string, number>, ms: number) =>
+  Object.fromEntries(Object.entries(b).map(([k, v]) => [k, Math.round(((v - (a[k] ?? 0)) / 1e6 / ms) * 1000) / 1000]).filter(([, v]) => (v as number) >= 0.01).sort((x, y) => (y[1] as number) - (x[1] as number)));
+const gpu = () => Math.max(0, ...[...sh("ioreg -r -c IOAccelerator -d 1").matchAll(/"Device Utilization %"=(\d+)/g)].map((m) => Number(m[1])));
 {
   const began = now();
   let quietSince = 0;
   while (true) {
     const l = load1();
-    if (l < QUIET_LOAD) { quietSince ||= now(); if (now() - quietSince >= (warmup ? 0 : 60_000)) break; } else quietSince = 0;
+    const g = gpu();
+    if (l < QUIET_LOAD && g < QUIET_GPU) { quietSince ||= now(); if (now() - quietSince >= (warmup ? 0 : 60_000)) break; } else quietSince = 0;
     if (now() - began > 6 * 3600_000) throw new Error(`the machine was not quiet (load ${l}) for six hours`);
-    if (Math.round((now() - began) / 1000) % 120 === 0) say(`waiting for a quiet machine: load ${l}, ${sh("ps -Ao pcpu,comm -r | sed -n 2,4p | tr -s ' ' | tr '\\n' ';'")}`);
+    if (Math.round((now() - began) / 1000) % 120 === 0) say(`waiting for a quiet machine: load ${l}, GPU ${g}%, ${sh("ps -Ao pcpu,comm -r | sed -n 2,4p | tr -s ' ' | tr '\\n' ';'")}`);
     await sleep(1000);
   }
   machine.waitedForQuietMs = now() - began;
   machine.loadAverage = sh("sysctl -n vm.loadavg");
+  machine.gpuUtilizationBefore = gpu();
+  const t0 = now(), g0 = gpuTimes();
+  await sleep(5000);
+  machine.gpuShareBefore = gpuShare(g0, gpuTimes(), now() - t0);
   machine.topProcesses = sh("ps -Ao pcpu,comm -r | head -8").split("\n");
 }
+
+// The one-minute load average every second while Chrome runs, kept in
+// run.json, so a run disturbed by other work shows it.
+const loadSamples: [number, number][] = [];
+const gpuRun0 = gpuTimes(), gpuRunAt = now();
+const sampler = setInterval(() => loadSamples.push([Math.round(now()), load1()]), 1000);
 
 // --- Chrome, with a profile of its own ---------------------------------------
 const profile = mkdtempSync(join(tmpdir(), "engine-bench-profile-"));
@@ -289,13 +322,14 @@ const intervals = frames.slice(1).map(([t], i) => t - frames[i]![0]);
 const sorted = [...intervals].sort((a, b) => a - b);
 const q = (p: number) => sorted[Math.min(sorted.length - 1, Math.floor(p * sorted.length))]!;
 
+clearInterval(sampler);
 const served = (await (await fetch(`${base}/__log`)).json()) as { path: string; status: number; raw: number; sent: number; encoding: string }[];
 const ok = served.filter((s) => s.status === 200);
 const run = {
   engine,
   url,
   root,
-  machine,
+  machine: { ...machine, loadDuringRun: { max: Math.max(...loadSamples.map(([, l]) => l)), samples: loadSamples }, gpuShareDuringRun: gpuShare(gpuRun0, gpuTimes(), now() - gpuRunAt) },
   chrome: { binary: CHROME, version: version.Browser, userAgent: version["User-Agent"], flags: flags.filter((f) => !f.startsWith("--user-data-dir") && !f.startsWith("--remote-debugging")) },
   adapter,
   view: VIEW,
@@ -331,4 +365,28 @@ ws.close();
 cleanup();
 await chrome.exited;
 rmSync(profile, { recursive: true, force: true });
+// Another program that drew on the GPU during the run, beyond what it drew
+// before it (gpuShareBefore), by more than DISTURBED_GPU seconds of GPU time
+// per second (default 0.1), disturbed the run. WeChat's XPlayer helper draws
+// a steady, low idle load on this Mac (observed 0.4-0.8 s/s) that tracks
+// window/compositor activity, not GPU contention from this benchmark; it is
+// excluded by name here and documented in the README rather than silencing
+// the check generally.
+const DISTURBED_GPU = Number(process.env.DISTURBED_GPU ?? 0.1);
+const IGNORE_GPU = /Chrome|WindowServer|XPlayer/;
+const before = machine.gpuShareBefore as Record<string, number>;
+const intruders = Object.entries(run.machine.gpuShareDuringRun as Record<string, number>)
+  .filter(([k, v]) => !IGNORE_GPU.test(k) && v - (before[k.replace(/ \(\d+\)$/, "")] ?? before[k] ?? 0) > DISTURBED_GPU);
+if (intruders.length) {
+  say(`disturbed: other GPU work during the run: ${intruders.map(([k, v]) => `${k} ${v}`).join(", ")}`);
+  process.exit(3);
+}
+// A run during which the load average went past DISTURBED_LOAD (default
+// twice the quiet threshold) was disturbed: exit 3 (run-all.sh repeats it,
+// keeping this one's files).
+const DISTURBED_LOAD = Number(process.env.DISTURBED_LOAD ?? QUIET_LOAD * 2);
+if (run.machine.loadDuringRun.max > DISTURBED_LOAD) {
+  say(`disturbed: the load average reached ${run.machine.loadDuringRun.max} (over ${DISTURBED_LOAD})`);
+  process.exit(3);
+}
 process.exit(0);

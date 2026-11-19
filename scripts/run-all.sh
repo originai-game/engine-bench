@@ -29,6 +29,14 @@ for engine in ${ENGINES:-origin three}; do
   # recorded run is its second load of this build, so both find their
   # shaders there; Chrome's own profile is new for both runs.
   bun harness/run.ts --engine "$engine" --root "$root" --out "$out/$engine" --warmup
-  bun harness/run.ts --engine "$engine" --root "$root" --out "$out/$engine"
+  # A run the harness finds disturbed (exit 3: other work drove the load
+  # up while it ran) is kept as <engine>-disturbed-<n> and repeated.
+  for attempt in 1 2 3; do
+    status=0
+    bun harness/run.ts --engine "$engine" --root "$root" --out "$out/$engine" || status=$?
+    [ "$status" = 3 ] || break
+    mv "$out/$engine" "$out/$engine-disturbed-$attempt"
+  done
+  [ "$status" = 0 ] || { echo "run-all: $engine failed ($status)" >&2; exit 1; }
 done
 bun harness/report.ts "$out"
