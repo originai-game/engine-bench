@@ -1,0 +1,6 @@
+.tools/
+.work/
+node_modules/
+three/dist/
+three/public/content/
+three/public/basis/

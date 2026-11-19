@@ -1,0 +1,30 @@
+cooked/
+dist/
+og-out/
+.og/
+node_modules/
+raw/
+
+# og-assets: the files og-assets.json pins, installed by `bun scripts/assets.ts ensure` (written by the tool)
+/assets/models/bike.glb
+/assets/models/block-a.glb
+/assets/models/block-b.glb
+/assets/models/courier.glb
+/assets/models/gate.glb
+/assets/models/lantern.glb
+/assets/models/ped_a.glb
+/assets/models/ped_b.glb
+/assets/models/ped_c.glb
+/assets/models/stall.glb
+/assets/textures/brushed_concrete_arm_1k.jpg
+/assets/textures/brushed_concrete_diff_1k.jpg
+/assets/textures/brushed_concrete_nor_gl_1k.jpg
+/assets/textures/cobblestone_01_arm_1k.jpg
+/assets/textures/cobblestone_01_diff_1k.jpg
+/assets/textures/cobblestone_01_nor_gl_1k.jpg
+/assets/textures/signs/bowl.png
+/assets/textures/signs/chevrons.png
+/assets/textures/signs/ring.png
+/assets/textures/signs/triangle.png
+/assets/textures/tower-windows.jpg
+# og-assets end

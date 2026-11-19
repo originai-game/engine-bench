@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# Builds both pages as a player gets them:
+#   origin/night-shift/dist  og build --publish, by the released engine through the launcher
+#   three/dist               the glTF/KTX2 export and a production vite build
+set -euo pipefail
+here=$(cd "$(dirname "$0")/.." && pwd)
+cd "$here"
+source scripts/env.sh
+
+(cd origin/night-shift && og build . --publish)
+scripts/export-content.sh
+rm -rf three/public/basis && mkdir -p three/public/basis
+cp node_modules/three/examples/jsm/libs/basis/basis_transcoder.{js,wasm} three/public/basis/
+bunx vite build --config three/vite.config.ts
