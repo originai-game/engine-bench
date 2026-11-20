@@ -1,0 +1,443 @@
+{
+  "engine": "origin",
+  "url": "http://127.0.0.1:8787/",
+  "root": "/Volumes/app/engine-bench/origin/the-last-light/dist",
+  "machine": {
+    "date": "2026-11-20T10:06:13.700Z",
+    "host": "fan的MacBook Pro",
+    "model": "Mac16,8",
+    "cpu": "Apple M4 Pro",
+    "memoryBytes": 25769803776,
+    "macos": "27.2 26B5091g",
+    "power": "Now drawing from 'AC Power'",
+    "loadAverage": "{ 1.62 1.62 1.91 }",
+    "topProcesses": [
+      "%CPU COMM",
+      "  5.2 /System/Library/PrivateFrameworks/SkyLight.framework/Resources/WindowServer",
+      "  1.2 /sbin/launchd",
+      "  1.2 /Applications/TencentMeeting.app/Contents/MacOS/TencentMeeting",
+      "  1.1 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/158.0.8127.36/Helpers/Google Chrome Helper (Aperitif).app/Contents/MacOS/Google Chrome Helper (Aperitif)",
+      "  0.9 amp",
+      "  0.8 /Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+      "  0.7 /Applications/Kit.app/Contents/MacOS/Kit"
+    ],
+    "waitedForQuietMs": 78127.86083984375,
+    "gpuUtilizationBefore": 0,
+    "gpuShareBefore": {},
+    "loadDuringRun": {
+      "max": 2.44,
+      "samples": [
+        [
+          1795169258944,
+          1.73
+        ],
+        [
+          1795169259945,
+          1.73
+        ],
+        [
+          1795169260947,
+          1.73
+        ],
+        [
+          1795169261949,
+          2.39
+        ],
+        [
+          1795169262949,
+          2.39
+        ],
+        [
+          1795169263951,
+          2.39
+        ],
+        [
+          1795169264953,
+          2.39
+        ],
+        [
+          1795169265955,
+          2.39
+        ],
+        [
+          1795169266957,
+          2.44
+        ],
+        [
+          1795169267959,
+          2.44
+        ],
+        [
+          1795169268960,
+          2.44
+        ],
+        [
+          1795169269962,
+          2.44
+        ],
+        [
+          1795169270962,
+          2.44
+        ],
+        [
+          1795169271963,
+          2.32
+        ],
+        [
+          1795169272963,
+          2.32
+        ],
+        [
+          1795169273965,
+          2.32
+        ],
+        [
+          1795169274967,
+          2.32
+        ],
+        [
+          1795169275967,
+          2.32
+        ],
+        [
+          1795169276969,
+          2.14
+        ],
+        [
+          1795169277970,
+          2.14
+        ],
+        [
+          1795169278970,
+          2.14
+        ],
+        [
+          1795169279971,
+          2.14
+        ],
+        [
+          1795169280973,
+          2.14
+        ],
+        [
+          1795169281975,
+          1.97
+        ],
+        [
+          1795169282975,
+          1.97
+        ],
+        [
+          1795169283975,
+          1.97
+        ],
+        [
+          1795169284976,
+          1.97
+        ],
+        [
+          1795169285977,
+          1.97
+        ],
+        [
+          1795169286978,
+          2.13
+        ],
+        [
+          1795169287978,
+          2.13
+        ],
+        [
+          1795169288980,
+          2.13
+        ],
+        [
+          1795169289981,
+          2.13
+        ],
+        [
+          1795169290982,
+          2.13
+        ],
+        [
+          1795169291982,
+          1.96
+        ],
+        [
+          1795169292982,
+          1.96
+        ],
+        [
+          1795169293983,
+          1.96
+        ],
+        [
+          1795169294983,
+          1.96
+        ],
+        [
+          1795169295984,
+          1.96
+        ],
+        [
+          1795169296984,
+          1.88
+        ],
+        [
+          1795169297985,
+          1.88
+        ],
+        [
+          1795169298987,
+          1.88
+        ],
+        [
+          1795169299988,
+          1.88
+        ],
+        [
+          1795169300988,
+          1.88
+        ],
+        [
+          1795169301989,
+          1.88
+        ],
+        [
+          1795169302990,
+          1.89
+        ],
+        [
+          1795169303990,
+          1.89
+        ],
+        [
+          1795169304990,
+          1.89
+        ],
+        [
+          1795169305992,
+          1.89
+        ],
+        [
+          1795169306994,
+          1.89
+        ],
+        [
+          1795169307996,
+          1.82
+        ]
+      ]
+    },
+    "gpuShareDuringRun": {
+      "WindowServer (436)": 0.04
+    }
+  },
+  "chrome": {
+    "binary": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+    "version": "Chrome/158.0.8127.36",
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/158.0.0.0 Safari/537.36",
+    "flags": [
+      "--no-first-run",
+      "--no-default-browser-check",
+      "--disable-extensions",
+      "--disable-component-update",
+      "--disable-background-networking",
+      "--disable-sync",
+      "--disable-default-apps",
+      "--disable-features=Translate,MediaRouter,OptimizationHints",
+      "--disable-background-timer-throttling",
+      "--disable-renderer-backgrounding",
+      "--disable-backgrounding-occluded-windows",
+      "--window-size=1280,920",
+      "--window-position=0,0",
+      "about:blank"
+    ]
+  },
+  "adapter": {
+    "vendor": "apple",
+    "architecture": "metal-3",
+    "device": "",
+    "description": ""
+  },
+  "view": {
+    "width": 1280,
+    "height": 720,
+    "dpr": 2
+  },
+  "download": {
+    "brotliBytes": 53241820,
+    "rawBytes": 93841785,
+    "requests": 100,
+    "requestsBeforePath": 98,
+    "notBrotli": [],
+    "notFound": []
+  },
+  "firstFrame": {
+    "timeOrigin": 1795169258412.125,
+    "navigatedAt": 1795169258410.576,
+    "firstCanvasFrameMs": 1631.594970703125,
+    "markMs": 3122.2900000009686,
+    "presentedMs": 5149.43505859375,
+    "framesBeforeIt": 20,
+    "context": "http://127.0.0.1:8787/game.8daf6aca5f77.js"
+  },
+  "pageMarks": [
+    [
+      "og:ready",
+      853.7600000016391
+    ],
+    [
+      "og:first-frame",
+      3122.2900000009686
+    ],
+    [
+      "og:start",
+      10276.030000001192
+    ]
+  ],
+  "frameTime": {
+    "pathSeconds": 20,
+    "wallMs": 37443.06494140625,
+    "frames": 377,
+    "medianMs": 99.68017578125,
+    "p95Ms": 213.844970703125,
+    "meanMs": 99.31373693587932,
+    "maxMs": 262.5400390625,
+    "resolution": [
+      2560,
+      1440
+    ],
+    "drawnAt": [
+      {
+        "renderScale": 1,
+        "presetSteps": 0,
+        "scene": [
+          2560,
+          1440
+        ],
+        "share": 0.266
+      },
+      {
+        "renderScale": 0.5,
+        "presetSteps": 0,
+        "scene": [
+          1280,
+          720
+        ],
+        "share": 0.184
+      },
+      {
+        "renderScale": 0.9,
+        "presetSteps": 0,
+        "scene": [
+          2304,
+          1296
+        ],
+        "share": 0.135
+      },
+      {
+        "renderScale": 0.6,
+        "presetSteps": 0,
+        "scene": [
+          1536,
+          864
+        ],
+        "share": 0.121
+      },
+      {
+        "renderScale": 0.7,
+        "presetSteps": 0,
+        "scene": [
+          1792,
+          1008
+        ],
+        "share": 0.119
+      },
+      {
+        "renderScale": 0.8,
+        "presetSteps": 0,
+        "scene": [
+          2048,
+          1152
+        ],
+        "share": 0.113
+      },
+      {
+        "renderScale": 0.5,
+        "presetSteps": 1,
+        "scene": [
+          1280,
+          720
+        ],
+        "share": 0.059
+      }
+    ],
+    "scaleTrace": {
+      "steps": [
+        {
+          "pathSeconds": 0,
+          "renderScale": 1
+        },
+        {
+          "pathSeconds": 4.43,
+          "renderScale": 0.9
+        },
+        {
+          "pathSeconds": 7.23,
+          "renderScale": 0.8
+        },
+        {
+          "pathSeconds": 9.83,
+          "renderScale": 0.7
+        },
+        {
+          "pathSeconds": 12.57,
+          "renderScale": 0.6
+        },
+        {
+          "pathSeconds": 15.03,
+          "renderScale": 0.5
+        },
+        {
+          "pathSeconds": 18.7,
+          "renderScale": 0.5
+        }
+      ],
+      "minRenderScale": 0.5,
+      "belowThreeQuartersSeconds": 10.2,
+      "belowThreeQuartersShare": 0.508
+    }
+  },
+  "workers": [
+    "http://127.0.0.1:8787/game.8daf6aca5f77.js",
+    "http://127.0.0.1:8787/snippets/wasm-bindgen-rayon-38edf6e439f6d70d/src/workerHelpers.no-bundler.js",
+    "http://127.0.0.1:8787/snippets/wasm-bindgen-rayon-38edf6e439f6d70d/src/workerHelpers.no-bundler.js",
+    "http://127.0.0.1:8787/snippets/wasm-bindgen-rayon-38edf6e439f6d70d/src/workerHelpers.no-bundler.js",
+    "http://127.0.0.1:8787/snippets/wasm-bindgen-rayon-38edf6e439f6d70d/src/workerHelpers.no-bundler.js",
+    "http://127.0.0.1:8787/snippets/wasm-bindgen-rayon-38edf6e439f6d70d/src/workerHelpers.no-bundler.js",
+    "http://127.0.0.1:8787/snippets/wasm-bindgen-rayon-38edf6e439f6d70d/src/workerHelpers.no-bundler.js",
+    "http://127.0.0.1:8787/snippets/wasm-bindgen-rayon-38edf6e439f6d70d/src/workerHelpers.no-bundler.js",
+    "http://127.0.0.1:8787/snippets/wasm-bindgen-rayon-38edf6e439f6d70d/src/workerHelpers.no-bundler.js",
+    "http://127.0.0.1:8787/game.8daf6aca5f77.js",
+    "http://127.0.0.1:8787/game.8daf6aca5f77.js",
+    "http://127.0.0.1:8787/game.8daf6aca5f77.js",
+    "http://127.0.0.1:8787/game.8daf6aca5f77.js",
+    "http://127.0.0.1:8787/sw.js",
+    "http://127.0.0.1:8787/audio-decoder.41733dff34d5.js"
+  ],
+  "console": [
+    "worker info: [og] boot stage \"wasm\" done in 136 ms",
+    "worker info: [og] boot stage \"bundle\" done in 337 ms",
+    "worker info: [og] boot stage \"create\" done in 100 ms",
+    "worker info: [og] pipelines sync: auto: an Apple GPU (apple metal-3), no consistent async advantage on M4 Pro",
+    "worker info: [og] boot stage \"attach\" done in 76 ms",
+    "worker info: [og] boot stage \"transcode\" done in 140 ms",
+    "worker info: [og] boot stage \"prime\" done in 4 ms",
+    "worker info: [og] boot stage \"settle\" done in 0 ms",
+    "worker info: renderer: the first frame waited 2237 ms (20 frames behind the gate)",
+    "worker info: [og] boot stage \"present\" done in 2266 ms",
+    "worker info: [og] first frame at 3076 ms",
+    "worker info: renderer: 67 pipelines made behind the gate in 2116 ms"
+  ]
+}

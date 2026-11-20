@@ -8,7 +8,9 @@ import { execFileSync } from "node:child_process";
 
 const dir = process.argv[2];
 if (!dir) throw new Error("usage: report.ts <results dir>");
-const NAMES: Record<string, string> = { origin: "Origin Engine 0.9.0", three: "three.js r187 WebGPURenderer" };
+// ORIGIN_LABEL names the Origin build when it is not the release (an engine
+// built from source reports the release's version string).
+const NAMES: Record<string, string> = { origin: process.env.ORIGIN_LABEL ?? "Origin Engine 0.9.0", three: "three.js r187 WebGPURenderer" };
 const disturbed = readdirSync(dir).filter((d) => d.includes("-disturbed-"));
 const runs = readdirSync(dir).filter((d) => !d.includes("-disturbed-") && existsSync(join(dir, d, "run.json"))).map((d) => ({ dir: d, run: JSON.parse(readFileSync(join(dir, d, "run.json"), "utf8")) }));
 const order = ["origin", "three"];
@@ -17,7 +19,7 @@ runs.sort((a, b) => order.indexOf(a.run.engine) - order.indexOf(b.run.engine));
 const mb = (n: number) => (n / 1e6).toFixed(2);
 const ms = (n: number) => n.toFixed(1);
 const lines = [
-  `# Night Shift in Chrome (WebGPU): ${runs[0]?.run.machine.date.slice(0, 10) ?? ""}`,
+  `# The Last Light in Chrome (WebGPU): ${runs[0]?.run.machine.date.slice(0, 10) ?? ""}`,
   "",
   `${runs[0]?.run.machine.model ?? ""}, ${runs[0]?.run.machine.cpu ?? ""}, macOS ${runs[0]?.run.machine.macos ?? ""}; ${runs[0]?.run.chrome.version ?? ""}; canvas ${runs[0]?.run.frameTime.resolution?.join(" x ") ?? ""}. One cold run per engine.`,
   "",
@@ -29,6 +31,18 @@ const lines = [
   "|---|---|---|---|---|---|",
   ...runs.map(({ run }) => `| ${NAMES[run.engine] ?? run.engine} | ${Math.round(run.firstFrame.firstCanvasFrameMs)} ms | ${Math.round(run.firstFrame.markMs)} ms | ${run.firstFrame.framesBeforeIt} | ${ms(run.frameTime.meanMs)} ms | ${ms(run.frameTime.maxMs)} ms |`),
   "",
+  ...runs.filter(({ run }) => run.frameTime.scaleTrace).flatMap(({ run }) => {
+    const t = run.frameTime.scaleTrace;
+    // The preset cap each step carried (frames.json display: presetSteps).
+    const rows: number[][] = JSON.parse(readFileSync(join(dir, run.engine, "frames.json"), "utf8")).display?.rows ?? [];
+    t.steps.forEach((s: { preset?: number }, i: number) => { s.preset = rows[i]?.[3] ?? 0; });
+    return [
+      `${NAMES[run.engine] ?? run.engine}'s render scale over the path (automatic quality, its default; the path's own clock): ` +
+        t.steps.map((s: { pathSeconds: number; renderScale: number; preset: number }) => `${s.renderScale.toFixed(1)}${s.preset ? ` and the graphics preset ${s.preset} step down` : ""} from ${s.pathSeconds.toFixed(1)} s`).join(", ") +
+        `. Lowest ${t.minRenderScale}; below 0.75 for ${t.belowThreeQuartersSeconds} s of the ${run.frameTime.pathSeconds ?? 20} s path (${Math.round(t.belowThreeQuartersShare * 100)}%). Every step is in frames.json (\`display\`).`,
+      "",
+    ];
+  }),
   "Load average (1, 5, 15 min) when each run started, and the highest one-minute load while it ran: " + runs.map(({ run }) => `${run.engine} ${run.machine.loadAverage}, at most ${run.machine.loadDuringRun.max}`).join("; ") + ".",
   disturbed.length ? `Runs repeated because other work disturbed them (kept beside these): ${disturbed.join(", ")}.` : "No run was disturbed.",
   "",

@@ -1,0 +1,191 @@
+[
+  {
+    "path": "/index.html",
+    "status": 200,
+    "raw": 430,
+    "sent": 175,
+    "encoding": "br"
+  },
+  {
+    "path": "/assets/index-BiMiUvTM.js",
+    "status": 200,
+    "raw": 1064058,
+    "sent": 242344,
+    "encoding": "br"
+  },
+  {
+    "path": "/content/terrain/coast-height.r16",
+    "status": 200,
+    "raw": 2101250,
+    "sent": 1002052,
+    "encoding": "br"
+  },
+  {
+    "path": "/content/terrain/coast-control.rgba",
+    "status": 200,
+    "raw": 4202500,
+    "sent": 33494,
+    "encoding": "br"
+  },
+  {
+    "path": "/content/terrain/aerial_grass_rock_diff_1k.ktx2",
+    "status": 200,
+    "raw": 178640,
+    "sent": 178645,
+    "encoding": "br"
+  },
+  {
+    "path": "/content/terrain/aerial_grass_rock_nor_gl_1k.ktx2",
+    "status": 200,
+    "raw": 1287810,
+    "sent": 1287815,
+    "encoding": "br"
+  },
+  {
+    "path": "/content/terrain/rock_face_03_grey_1k.ktx2",
+    "status": 200,
+    "raw": 166609,
+    "sent": 166614,
+    "encoding": "br"
+  },
+  {
+    "path": "/content/terrain/rock_face_03_nor_gl_1k.ktx2",
+    "status": 200,
+    "raw": 1299491,
+    "sent": 1299496,
+    "encoding": "br"
+  },
+  {
+    "path": "/content/terrain/forest_ground_04_diff_1k.ktx2",
+    "status": 200,
+    "raw": 174344,
+    "sent": 174349,
+    "encoding": "br"
+  },
+  {
+    "path": "/content/terrain/forest_ground_04_nor_gl_1k.ktx2",
+    "status": 200,
+    "raw": 1312628,
+    "sent": 1312636,
+    "encoding": "br"
+  },
+  {
+    "path": "/basis/basis_transcoder.js",
+    "status": 200,
+    "raw": 57529,
+    "sent": 13699,
+    "encoding": "br"
+  },
+  {
+    "path": "/basis/basis_transcoder.wasm",
+    "status": 200,
+    "raw": 527333,
+    "sent": 203605,
+    "encoding": "br"
+  },
+  {
+    "path": "/content/models/lighthouse.glb",
+    "status": 200,
+    "raw": 11812996,
+    "sent": 11497250,
+    "encoding": "br"
+  },
+  {
+    "path": "/content/models/cottage.glb",
+    "status": 200,
+    "raw": 5165804,
+    "sent": 4893460,
+    "encoding": "br"
+  },
+  {
+    "path": "/content/models/ruin.glb",
+    "status": 200,
+    "raw": 4537316,
+    "sent": 4314512,
+    "encoding": "br"
+  },
+  {
+    "path": "/content/models/rock-cliff.glb",
+    "status": 200,
+    "raw": 6103520,
+    "sent": 5756184,
+    "encoding": "br"
+  },
+  {
+    "path": "/content/models/boulder.glb",
+    "status": 200,
+    "raw": 3198076,
+    "sent": 3081239,
+    "encoding": "br"
+  },
+  {
+    "path": "/content/models/sea-stack.glb",
+    "status": 200,
+    "raw": 2988160,
+    "sent": 2867410,
+    "encoding": "br"
+  },
+  {
+    "path": "/content/models/wanderer.glb",
+    "status": 200,
+    "raw": 4637260,
+    "sent": 4327480,
+    "encoding": "br"
+  },
+  {
+    "path": "/content/models/lantern.glb",
+    "status": 200,
+    "raw": 279344,
+    "sent": 234683,
+    "encoding": "br"
+  },
+  {
+    "path": "/content/models/hawthorn.glb",
+    "status": 200,
+    "raw": 1919800,
+    "sent": 806399,
+    "encoding": "br"
+  },
+  {
+    "path": "/content/models/staff.glb",
+    "status": 200,
+    "raw": 16232,
+    "sent": 6462,
+    "encoding": "br"
+  },
+  {
+    "path": "/content/models/plume-grass.glb",
+    "status": 200,
+    "raw": 51244,
+    "sent": 26090,
+    "encoding": "br"
+  },
+  {
+    "path": "/content/models/oxeye.glb",
+    "status": 200,
+    "raw": 10816,
+    "sent": 4121,
+    "encoding": "br"
+  },
+  {
+    "path": "/content/models/buttercup.glb",
+    "status": 200,
+    "raw": 8960,
+    "sent": 3201,
+    "encoding": "br"
+  },
+  {
+    "path": "/content/models/thrift.glb",
+    "status": 200,
+    "raw": 12944,
+    "sent": 5100,
+    "encoding": "br"
+  },
+  {
+    "path": "/content/models/foxglove.glb",
+    "status": 200,
+    "raw": 26980,
+    "sent": 13543,
+    "encoding": "br"
+  }
+]

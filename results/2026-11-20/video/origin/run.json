@@ -1,0 +1,375 @@
+{
+  "engine": "origin",
+  "url": "http://127.0.0.1:8787/",
+  "root": "/Volumes/app/engine-bench/origin/the-last-light/dist",
+  "machine": {
+    "date": "2026-11-20T09:37:29.060Z",
+    "host": "fan的MacBook Pro",
+    "model": "Mac16,8",
+    "cpu": "Apple M4 Pro",
+    "memoryBytes": 25769803776,
+    "macos": "27.2 26B5091g",
+    "power": "Now drawing from 'AC Power'",
+    "loadAverage": "{ 1.56 1.90 2.98 }",
+    "topProcesses": [
+      "%CPU COMM",
+      "  1.1 /System/Library/PrivateFrameworks/SkyLight.framework/Resources/WindowServer",
+      "  1.0 /Applications/TencentMeeting.app/Contents/MacOS/TencentMeeting",
+      "  0.7 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/158.0.8127.36/Helpers/Google Chrome Helper (Aperitif).app/Contents/MacOS/Google Chrome Helper (Aperitif)",
+      "  0.6 /Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+      "  0.5 /System/Library/DriverExtensions/com.apple.DriverKit-AppleBCMWLAN.dext/com.apple.DriverKit-AppleBCMWLAN",
+      "  0.4 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/158.0.8127.36/Helpers/Google Chrome Helper (Aperitif Renderer).app/Contents/MacOS/Google Chrome Helper (Aperitif Renderer)",
+      "  0.4 /System/Library/DriverExtensions/com.apple.AppleUserHIDDrivers.dext/com.apple.AppleUserHIDDrivers"
+    ],
+    "waitedForQuietMs": 61506.823486328125,
+    "gpuUtilizationBefore": 0,
+    "gpuShareBefore": {},
+    "loadDuringRun": {
+      "max": 2.13,
+      "samples": [
+        [
+          1795167517694,
+          1.51
+        ],
+        [
+          1795167518695,
+          1.51
+        ],
+        [
+          1795167519695,
+          1.47
+        ],
+        [
+          1795167520697,
+          1.47
+        ],
+        [
+          1795167521699,
+          1.47
+        ],
+        [
+          1795167522701,
+          1.47
+        ],
+        [
+          1795167523702,
+          1.47
+        ],
+        [
+          1795167524703,
+          1.35
+        ],
+        [
+          1795167525705,
+          1.35
+        ],
+        [
+          1795167526707,
+          1.35
+        ],
+        [
+          1795167527708,
+          1.35
+        ],
+        [
+          1795167528710,
+          1.35
+        ],
+        [
+          1795167529710,
+          1.25
+        ],
+        [
+          1795167530711,
+          1.25
+        ],
+        [
+          1795167531712,
+          1.25
+        ],
+        [
+          1795167532712,
+          1.25
+        ],
+        [
+          1795167533712,
+          1.25
+        ],
+        [
+          1795167534714,
+          1.55
+        ],
+        [
+          1795167535716,
+          1.55
+        ],
+        [
+          1795167536717,
+          1.55
+        ],
+        [
+          1795167537719,
+          1.55
+        ],
+        [
+          1795167538720,
+          1.55
+        ],
+        [
+          1795167539720,
+          1.5
+        ],
+        [
+          1795167540721,
+          1.5
+        ],
+        [
+          1795167541722,
+          1.5
+        ],
+        [
+          1795167542723,
+          1.5
+        ],
+        [
+          1795167543724,
+          1.5
+        ],
+        [
+          1795167544726,
+          1.78
+        ],
+        [
+          1795167545727,
+          1.78
+        ],
+        [
+          1795167546728,
+          1.78
+        ],
+        [
+          1795167547729,
+          1.78
+        ],
+        [
+          1795167548729,
+          1.78
+        ],
+        [
+          1795167549730,
+          1.8
+        ],
+        [
+          1795167550731,
+          1.8
+        ],
+        [
+          1795167551731,
+          1.8
+        ],
+        [
+          1795167552732,
+          1.8
+        ],
+        [
+          1795167553734,
+          1.8
+        ],
+        [
+          1795167554735,
+          2.13
+        ],
+        [
+          1795167555736,
+          2.13
+        ],
+        [
+          1795167556737,
+          2.13
+        ],
+        [
+          1795167557739,
+          2.13
+        ],
+        [
+          1795167558739,
+          2.13
+        ],
+        [
+          1795167559741,
+          1.96
+        ],
+        [
+          1795167560743,
+          1.96
+        ]
+      ]
+    },
+    "gpuShareDuringRun": {
+      "WindowServer (436)": 0.041
+    }
+  },
+  "chrome": {
+    "binary": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+    "version": "Chrome/158.0.8127.36",
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/158.0.0.0 Safari/537.36",
+    "flags": [
+      "--no-first-run",
+      "--no-default-browser-check",
+      "--disable-extensions",
+      "--disable-component-update",
+      "--disable-background-networking",
+      "--disable-sync",
+      "--disable-default-apps",
+      "--disable-features=Translate,MediaRouter,OptimizationHints",
+      "--disable-background-timer-throttling",
+      "--disable-renderer-backgrounding",
+      "--disable-backgrounding-occluded-windows",
+      "--window-size=1280,920",
+      "--window-position=0,0",
+      "about:blank"
+    ]
+  },
+  "adapter": {
+    "vendor": "apple",
+    "architecture": "metal-3",
+    "device": "",
+    "description": ""
+  },
+  "view": {
+    "width": 1280,
+    "height": 720,
+    "dpr": 2
+  },
+  "download": {
+    "brotliBytes": 53241815,
+    "rawBytes": 93841622,
+    "requests": 100,
+    "requestsBeforePath": 98,
+    "notBrotli": [],
+    "notFound": []
+  },
+  "firstFrame": {
+    "timeOrigin": 1795167517165.95,
+    "navigatedAt": 1795167517164.3496,
+    "firstCanvasFrameMs": 1638.625,
+    "markMs": 3097.9599999990314,
+    "presentedMs": 5119.68505859375,
+    "framesBeforeIt": 20,
+    "context": "http://127.0.0.1:8787/game.ba94691d834f.js"
+  },
+  "pageMarks": [
+    [
+      "og:ready",
+      874.1500000003725
+    ],
+    [
+      "og:first-frame",
+      3097.9599999990314
+    ],
+    [
+      "og:start",
+      10260.594999998808
+    ]
+  ],
+  "frameTime": {
+    "pathSeconds": 20,
+    "wallMs": 31671.133056640625,
+    "frames": 310,
+    "medianMs": 101.304931640625,
+    "p95Ms": 128.91015625,
+    "meanMs": 102.15998400839402,
+    "maxMs": 256.710205078125,
+    "resolution": [
+      2560,
+      1440
+    ],
+    "drawnAt": [
+      {
+        "renderScale": 1,
+        "presetSteps": 0,
+        "scene": [
+          2560,
+          1440
+        ],
+        "share": 0.201
+      },
+      {
+        "renderScale": 0.5,
+        "presetSteps": 0,
+        "scene": [
+          1280,
+          720
+        ],
+        "share": 0.186
+      },
+      {
+        "renderScale": 0.9,
+        "presetSteps": 0,
+        "scene": [
+          2304,
+          1296
+        ],
+        "share": 0.171
+      },
+      {
+        "renderScale": 0.6,
+        "presetSteps": 0,
+        "scene": [
+          1536,
+          864
+        ],
+        "share": 0.162
+      },
+      {
+        "renderScale": 0.7,
+        "presetSteps": 0,
+        "scene": [
+          1792,
+          1008
+        ],
+        "share": 0.139
+      },
+      {
+        "renderScale": 0.8,
+        "presetSteps": 0,
+        "scene": [
+          2048,
+          1152
+        ],
+        "share": 0.136
+      }
+    ]
+  },
+  "workers": [
+    "http://127.0.0.1:8787/game.ba94691d834f.js",
+    "http://127.0.0.1:8787/snippets/wasm-bindgen-rayon-38edf6e439f6d70d/src/workerHelpers.no-bundler.js",
+    "http://127.0.0.1:8787/snippets/wasm-bindgen-rayon-38edf6e439f6d70d/src/workerHelpers.no-bundler.js",
+    "http://127.0.0.1:8787/snippets/wasm-bindgen-rayon-38edf6e439f6d70d/src/workerHelpers.no-bundler.js",
+    "http://127.0.0.1:8787/snippets/wasm-bindgen-rayon-38edf6e439f6d70d/src/workerHelpers.no-bundler.js",
+    "http://127.0.0.1:8787/snippets/wasm-bindgen-rayon-38edf6e439f6d70d/src/workerHelpers.no-bundler.js",
+    "http://127.0.0.1:8787/snippets/wasm-bindgen-rayon-38edf6e439f6d70d/src/workerHelpers.no-bundler.js",
+    "http://127.0.0.1:8787/snippets/wasm-bindgen-rayon-38edf6e439f6d70d/src/workerHelpers.no-bundler.js",
+    "http://127.0.0.1:8787/snippets/wasm-bindgen-rayon-38edf6e439f6d70d/src/workerHelpers.no-bundler.js",
+    "http://127.0.0.1:8787/game.ba94691d834f.js",
+    "http://127.0.0.1:8787/game.ba94691d834f.js",
+    "http://127.0.0.1:8787/game.ba94691d834f.js",
+    "http://127.0.0.1:8787/game.ba94691d834f.js",
+    "http://127.0.0.1:8787/sw.js",
+    "http://127.0.0.1:8787/audio-decoder.41733dff34d5.js"
+  ],
+  "console": [
+    "worker info: [og] boot stage \"wasm\" done in 139 ms",
+    "worker info: [og] boot stage \"bundle\" done in 342 ms",
+    "worker info: [og] boot stage \"create\" done in 103 ms",
+    "worker info: [og] pipelines sync: auto: an Apple GPU (apple metal-3), no consistent async advantage on M4 Pro",
+    "worker info: [og] boot stage \"attach\" done in 76 ms",
+    "worker info: [og] boot stage \"transcode\" done in 149 ms",
+    "worker info: [og] boot stage \"prime\" done in 4 ms",
+    "worker info: [og] boot stage \"settle\" done in 0 ms",
+    "worker info: renderer: the first frame waited 2193 ms (20 frames behind the gate)",
+    "worker info: [og] boot stage \"present\" done in 2221 ms",
+    "worker info: [og] first frame at 3051 ms",
+    "worker info: renderer: 67 pipelines made behind the gate in 2082 ms"
+  ]
+}

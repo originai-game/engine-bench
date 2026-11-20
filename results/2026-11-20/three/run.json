@@ -1,0 +1,249 @@
+{
+  "engine": "three",
+  "url": "http://127.0.0.1:8787/",
+  "root": "/Volumes/app/engine-bench/three/dist",
+  "machine": {
+    "date": "2026-11-20T10:08:39.894Z",
+    "host": "fan的MacBook Pro",
+    "model": "Mac16,8",
+    "cpu": "Apple M4 Pro",
+    "memoryBytes": 25769803776,
+    "macos": "27.2 26B5091g",
+    "power": "Now drawing from 'AC Power'",
+    "loadAverage": "{ 1.11 1.50 1.83 }",
+    "topProcesses": [
+      "%CPU COMM",
+      "  1.5 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/158.0.8127.36/Helpers/Google Chrome Helper (Aperitif).app/Contents/MacOS/Google Chrome Helper (Aperitif)",
+      "  1.0 /Applications/TencentMeeting.app/Contents/MacOS/TencentMeeting",
+      "  0.9 /System/Library/DriverExtensions/com.apple.DriverKit-AppleBCMWLAN.dext/com.apple.DriverKit-AppleBCMWLAN",
+      "  0.7 /Applications/Grok Bot.app/Contents/MacOS/Grok Bot",
+      "  0.6 /usr/libexec/trustd",
+      "  0.4 /Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+      "  0.4 /System/Library/DriverExtensions/com.apple.AppleUserHIDDrivers.dext/com.apple.AppleUserHIDDrivers"
+    ],
+    "waitedForQuietMs": 61499.412353515625,
+    "gpuUtilizationBefore": 0,
+    "gpuShareBefore": {},
+    "loadDuringRun": {
+      "max": 1.37,
+      "samples": [
+        [
+          1795169388484,
+          1.25
+        ],
+        [
+          1795169389484,
+          1.25
+        ],
+        [
+          1795169390486,
+          1.25
+        ],
+        [
+          1795169391488,
+          1.25
+        ],
+        [
+          1795169392490,
+          1.25
+        ],
+        [
+          1795169393492,
+          1.31
+        ],
+        [
+          1795169394493,
+          1.31
+        ],
+        [
+          1795169395495,
+          1.31
+        ],
+        [
+          1795169396497,
+          1.31
+        ],
+        [
+          1795169397497,
+          1.31
+        ],
+        [
+          1795169398499,
+          1.29
+        ],
+        [
+          1795169399501,
+          1.29
+        ],
+        [
+          1795169400503,
+          1.29
+        ],
+        [
+          1795169401504,
+          1.29
+        ],
+        [
+          1795169402505,
+          1.29
+        ],
+        [
+          1795169403507,
+          1.27
+        ],
+        [
+          1795169404507,
+          1.27
+        ],
+        [
+          1795169405507,
+          1.27
+        ],
+        [
+          1795169406508,
+          1.27
+        ],
+        [
+          1795169407508,
+          1.27
+        ],
+        [
+          1795169408509,
+          1.16
+        ],
+        [
+          1795169409509,
+          1.16
+        ],
+        [
+          1795169410509,
+          1.16
+        ],
+        [
+          1795169411510,
+          1.16
+        ],
+        [
+          1795169412512,
+          1.16
+        ],
+        [
+          1795169413514,
+          1.23
+        ],
+        [
+          1795169414516,
+          1.23
+        ],
+        [
+          1795169415518,
+          1.23
+        ],
+        [
+          1795169416520,
+          1.23
+        ],
+        [
+          1795169417522,
+          1.23
+        ],
+        [
+          1795169418524,
+          1.37
+        ],
+        [
+          1795169419525,
+          1.37
+        ],
+        [
+          1795169420528,
+          1.37
+        ],
+        [
+          1795169421530,
+          1.37
+        ]
+      ]
+    },
+    "gpuShareDuringRun": {
+      "WindowServer (436)": 0.085
+    }
+  },
+  "chrome": {
+    "binary": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+    "version": "Chrome/158.0.8127.36",
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/158.0.0.0 Safari/537.36",
+    "flags": [
+      "--no-first-run",
+      "--no-default-browser-check",
+      "--disable-extensions",
+      "--disable-component-update",
+      "--disable-background-networking",
+      "--disable-sync",
+      "--disable-default-apps",
+      "--disable-features=Translate,MediaRouter,OptimizationHints",
+      "--disable-background-timer-throttling",
+      "--disable-renderer-backgrounding",
+      "--disable-backgrounding-occluded-windows",
+      "--window-size=1280,920",
+      "--window-position=0,0",
+      "about:blank"
+    ]
+  },
+  "adapter": {
+    "vendor": "apple",
+    "architecture": "metal-3",
+    "device": "",
+    "description": ""
+  },
+  "view": {
+    "width": 1280,
+    "height": 720,
+    "dpr": 2
+  },
+  "download": {
+    "brotliBytes": 43752491,
+    "rawBytes": 53143222,
+    "requests": 27,
+    "requestsBeforePath": 27,
+    "notBrotli": [],
+    "notFound": []
+  },
+  "firstFrame": {
+    "timeOrigin": 1795169387945.495,
+    "navigatedAt": 1795169387944.123,
+    "firstCanvasFrameMs": 4008.284912109375,
+    "markMs": 3840.870000001043,
+    "presentedMs": 4008.284912109375,
+    "framesBeforeIt": 0,
+    "context": "page"
+  },
+  "pageMarks": [
+    [
+      "bench:first-frame",
+      3840.870000001043
+    ]
+  ],
+  "frameTime": {
+    "pathSeconds": 20,
+    "wallMs": 20132.456298828125,
+    "frames": 361,
+    "medianMs": 38.55517578125,
+    "p95Ms": 97.47021484375,
+    "meanMs": 55.400416395399304,
+    "maxMs": 332.06005859375,
+    "resolution": [
+      2560,
+      1440
+    ],
+    "drawnAt": null,
+    "scaleTrace": null
+  },
+  "workers": [
+    "blob:http://127.0.0.1:8787/471ebccd-716d-4222-8ee2-ec414d3136c3",
+    "blob:http://127.0.0.1:8787/471ebccd-716d-4222-8ee2-ec414d3136c3",
+    "blob:http://127.0.0.1:8787/471ebccd-716d-4222-8ee2-ec414d3136c3",
+    "blob:http://127.0.0.1:8787/471ebccd-716d-4222-8ee2-ec414d3136c3"
+  ],
+  "console": []
+}

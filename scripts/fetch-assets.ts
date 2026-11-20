@@ -1,14 +1,14 @@
-// fetch-assets.ts: installs Night Shift's binary assets (models, textures),
+// fetch-assets.ts: installs a scene's binary assets (models, textures),
 // which are not in git, from the OriginGame asset store where origin-engine
 // pins them (public objects, addressed by sha256), each checked against the
-// pin in origin/night-shift/og-assets.json. Files already in place with the
+// pin in origin/<scene>/og-assets.json (SCENE, default the-last-light). Files already in place with the
 // right sha256 are kept.
 import { createHash } from "node:crypto";
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 
 const STORE = (process.env.OG_ASSETS_URL ?? "https://origingame.ai").replace(/\/+$/, "");
-const project = join(import.meta.dir, "..", "origin", "night-shift");
+const project = join(import.meta.dir, "..", "origin", process.env.SCENE ?? "the-last-light");
 const { files } = JSON.parse(readFileSync(join(project, "og-assets.json"), "utf8")) as { files: { path: string; sha256: string; size: number }[] };
 const sha256 = (b: Uint8Array) => createHash("sha256").update(b).digest("hex");
 

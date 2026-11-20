@@ -1,0 +1,870 @@
+[
+  {
+    "path": "/index.html",
+    "status": 200,
+    "raw": 7108,
+    "sent": 2242,
+    "encoding": "br"
+  },
+  {
+    "path": "/install.7733d381be93.js",
+    "status": 200,
+    "raw": 100,
+    "sent": 71,
+    "encoding": "br"
+  },
+  {
+    "path": "/shell.85aadae1ceae.css",
+    "status": 200,
+    "raw": 9284,
+    "sent": 2223,
+    "encoding": "br"
+  },
+  {
+    "path": "/play.3b4722707f4c.js",
+    "status": 200,
+    "raw": 115256,
+    "sent": 37157,
+    "encoding": "br"
+  },
+  {
+    "path": "/manifest.webmanifest",
+    "status": 200,
+    "raw": 488,
+    "sent": 182,
+    "encoding": "br"
+  },
+  {
+    "path": "/game.70ab79813d3e.js",
+    "status": 200,
+    "raw": 507941,
+    "sent": 92654,
+    "encoding": "br"
+  },
+  {
+    "path": "/icons/icon-192.png",
+    "status": 200,
+    "raw": 7992,
+    "sent": 7892,
+    "encoding": "br"
+  },
+  {
+    "path": "/icons/icon-512.png",
+    "status": 200,
+    "raw": 23824,
+    "sent": 22813,
+    "encoding": "br"
+  },
+  {
+    "path": "/origin-engine-lanes.e63adbb6c1de.js",
+    "status": 200,
+    "raw": 444623,
+    "sent": 32758,
+    "encoding": "br"
+  },
+  {
+    "path": "/snippets/wasm-bindgen-rayon-38edf6e439f6d70d/src/workerHelpers.no-bundler.js",
+    "status": 200,
+    "raw": 3618,
+    "sent": 1388,
+    "encoding": "br"
+  },
+  {
+    "path": "/origin-engine-lanes_bg.b6fa8f4ee201.wasm",
+    "status": 200,
+    "raw": 40472170,
+    "sent": 8090559,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/.cook.ogt",
+    "status": 200,
+    "raw": 31669,
+    "sent": 9812,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/fx/leaves.ogt.ogb",
+    "status": 200,
+    "raw": 677,
+    "sent": 391,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/fx/petals.ogt.ogb",
+    "status": 200,
+    "raw": 666,
+    "sent": 388,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/fx/steam.ogt.ogb",
+    "status": 200,
+    "raw": 683,
+    "sent": 359,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/looks/night-shift.ogt.ogb",
+    "status": 200,
+    "raw": 853,
+    "sent": 456,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/bike.glb.ogb",
+    "status": 200,
+    "raw": 3324944,
+    "sent": 2548543,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/bike.glb.tex0.ogb",
+    "status": 200,
+    "raw": 674011,
+    "sent": 674016,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/bike.glb.tex1.ogb",
+    "status": 200,
+    "raw": 4208003,
+    "sent": 3571140,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/bike.glb.tex2.ogb",
+    "status": 200,
+    "raw": 5108187,
+    "sent": 4438612,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/block-a.glb.ogb",
+    "status": 200,
+    "raw": 4028688,
+    "sent": 3292801,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/block-a.glb.tex0.ogb",
+    "status": 200,
+    "raw": 187218,
+    "sent": 187223,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/block-a.glb.tex1.ogb",
+    "status": 200,
+    "raw": 1111748,
+    "sent": 950509,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/block-a.glb.tex2.ogb",
+    "status": 200,
+    "raw": 1339888,
+    "sent": 1214875,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/block-a.glb.lod0-0-1-0.ogb",
+    "status": 200,
+    "raw": 51240,
+    "sent": 50701,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/block-a.glb.lod0-0-1-1.ogb",
+    "status": 200,
+    "raw": 106363,
+    "sent": 106368,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/block-a.glb.lod0-0-1-2.ogb",
+    "status": 200,
+    "raw": 36234,
+    "sent": 35799,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/block-a.glb.lod0-0-2-0.ogb",
+    "status": 200,
+    "raw": 30881,
+    "sent": 27210,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/block-a.glb.lod0-0-2-1.ogb",
+    "status": 200,
+    "raw": 57387,
+    "sent": 49321,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/block-a.glb.lod0-0-2-2.ogb",
+    "status": 200,
+    "raw": 22241,
+    "sent": 20137,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/block-b.glb.ogb",
+    "status": 200,
+    "raw": 3927184,
+    "sent": 3210660,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/block-b.glb.tex0.ogb",
+    "status": 200,
+    "raw": 196471,
+    "sent": 196476,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/block-b.glb.tex1.ogb",
+    "status": 200,
+    "raw": 1019578,
+    "sent": 873723,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/block-b.glb.tex2.ogb",
+    "status": 200,
+    "raw": 1351007,
+    "sent": 1221290,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/block-b.glb.lod0-0-1-0.ogb",
+    "status": 200,
+    "raw": 85216,
+    "sent": 68332,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/block-b.glb.lod0-0-1-1.ogb",
+    "status": 200,
+    "raw": 170650,
+    "sent": 129457,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/block-b.glb.lod0-0-1-2.ogb",
+    "status": 200,
+    "raw": 58955,
+    "sent": 44484,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/block-b.glb.lod0-0-2-0.ogb",
+    "status": 200,
+    "raw": 38352,
+    "sent": 35330,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/block-b.glb.lod0-0-2-1.ogb",
+    "status": 200,
+    "raw": 71188,
+    "sent": 64880,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/block-b.glb.lod0-0-2-2.ogb",
+    "status": 200,
+    "raw": 26828,
+    "sent": 24853,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/cherry-bare.ogt.ogb",
+    "status": 200,
+    "raw": 19186,
+    "sent": 11516,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/cherry.ogt.ogb",
+    "status": 200,
+    "raw": 253133,
+    "sent": 144507,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/courier.glb.ogb",
+    "status": 200,
+    "raw": 2213580,
+    "sent": 1706616,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/courier.glb.anim.ogb",
+    "status": 200,
+    "raw": 706600,
+    "sent": 471747,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/courier.glb.tex0.ogb",
+    "status": 200,
+    "raw": 716290,
+    "sent": 716295,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/courier.glb.tex1.ogb",
+    "status": 200,
+    "raw": 3238346,
+    "sent": 2761798,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/courier.glb.tex2.ogb",
+    "status": 200,
+    "raw": 4955488,
+    "sent": 4307823,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/gate.glb.ogb",
+    "status": 200,
+    "raw": 847472,
+    "sent": 681354,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/gate.glb.tex0.ogb",
+    "status": 200,
+    "raw": 210540,
+    "sent": 210545,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/gate.glb.tex1.ogb",
+    "status": 200,
+    "raw": 1065710,
+    "sent": 929756,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/gate.glb.tex2.ogb",
+    "status": 200,
+    "raw": 1305670,
+    "sent": 1170394,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/gate.glb.lod0-0-2-0.ogb",
+    "status": 200,
+    "raw": 34810,
+    "sent": 30901,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/gate.glb.lod0-0-2-1.ogb",
+    "status": 200,
+    "raw": 54973,
+    "sent": 47263,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/gate.glb.lod0-0-2-2.ogb",
+    "status": 200,
+    "raw": 23134,
+    "sent": 20822,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/lantern.glb.ogb",
+    "status": 200,
+    "raw": 456464,
+    "sent": 378031,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/lantern.glb.tex0.ogb",
+    "status": 200,
+    "raw": 185513,
+    "sent": 185518,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/lantern.glb.tex1.ogb",
+    "status": 200,
+    "raw": 861140,
+    "sent": 754117,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/lantern.glb.tex2.ogb",
+    "status": 200,
+    "raw": 1328727,
+    "sent": 1215251,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/lantern.glb.lod0-0-1-0.ogb",
+    "status": 200,
+    "raw": 13177,
+    "sent": 12539,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/lantern.glb.lod0-0-1-1.ogb",
+    "status": 200,
+    "raw": 25046,
+    "sent": 24019,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/lantern.glb.lod0-0-1-2.ogb",
+    "status": 200,
+    "raw": 9263,
+    "sent": 8756,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/lantern.glb.lod0-0-1-3.ogb",
+    "status": 200,
+    "raw": 13389,
+    "sent": 12871,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/lantern.glb.lod0-0-2-0.ogb",
+    "status": 200,
+    "raw": 10191,
+    "sent": 9368,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/lantern.glb.lod0-0-2-1.ogb",
+    "status": 200,
+    "raw": 18782,
+    "sent": 17466,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/lantern.glb.lod0-0-2-2.ogb",
+    "status": 200,
+    "raw": 7060,
+    "sent": 6260,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/lantern.glb.lod0-0-2-3.ogb",
+    "status": 200,
+    "raw": 10342,
+    "sent": 9606,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/ped_a.glb.ogb",
+    "status": 200,
+    "raw": 513388,
+    "sent": 423886,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/ped_a.glb.anim.ogb",
+    "status": 200,
+    "raw": 287373,
+    "sent": 162431,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/ped_a.glb.tex0.ogb",
+    "status": 200,
+    "raw": 137463,
+    "sent": 137468,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/ped_a.glb.tex1.ogb",
+    "status": 200,
+    "raw": 777398,
+    "sent": 686583,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/ped_a.glb.tex2.ogb",
+    "status": 200,
+    "raw": 1233002,
+    "sent": 1096070,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/ped_a.glb.lod0-0-1-0.ogb",
+    "status": 200,
+    "raw": 12288,
+    "sent": 11814,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/ped_a.glb.lod0-0-1-1.ogb",
+    "status": 200,
+    "raw": 28042,
+    "sent": 27572,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/ped_a.glb.lod0-0-1-2.ogb",
+    "status": 200,
+    "raw": 8901,
+    "sent": 8413,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/ped_a.glb.lod0-0-2-0.ogb",
+    "status": 200,
+    "raw": 4285,
+    "sent": 3829,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/ped_a.glb.lod0-0-2-1.ogb",
+    "status": 200,
+    "raw": 8041,
+    "sent": 7593,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/ped_a.glb.lod0-0-2-2.ogb",
+    "status": 200,
+    "raw": 3255,
+    "sent": 2808,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/ped_b.glb.ogb",
+    "status": 200,
+    "raw": 642268,
+    "sent": 529679,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/ped_b.glb.anim.ogb",
+    "status": 200,
+    "raw": 379117,
+    "sent": 255685,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/ped_b.glb.tex0.ogb",
+    "status": 200,
+    "raw": 157598,
+    "sent": 157603,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/ped_b.glb.tex1.ogb",
+    "status": 200,
+    "raw": 879373,
+    "sent": 761894,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/ped_b.glb.tex2.ogb",
+    "status": 200,
+    "raw": 1270158,
+    "sent": 1133136,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/ped_b.glb.lod0-0-1-0.ogb",
+    "status": 200,
+    "raw": 28528,
+    "sent": 25254,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/ped_b.glb.lod0-0-1-1.ogb",
+    "status": 200,
+    "raw": 52372,
+    "sent": 44014,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/ped_b.glb.lod0-0-1-2.ogb",
+    "status": 200,
+    "raw": 22178,
+    "sent": 20171,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/ped_b.glb.lod0-0-2-0.ogb",
+    "status": 200,
+    "raw": 12170,
+    "sent": 11602,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/ped_b.glb.lod0-0-2-1.ogb",
+    "status": 200,
+    "raw": 23732,
+    "sent": 22695,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/ped_b.glb.lod0-0-2-2.ogb",
+    "status": 200,
+    "raw": 9109,
+    "sent": 8625,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/ped_c.glb.ogb",
+    "status": 200,
+    "raw": 565740,
+    "sent": 465578,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/ped_c.glb.anim.ogb",
+    "status": 200,
+    "raw": 321015,
+    "sent": 213339,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/ped_c.glb.tex0.ogb",
+    "status": 200,
+    "raw": 167656,
+    "sent": 167661,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/ped_c.glb.tex1.ogb",
+    "status": 200,
+    "raw": 824136,
+    "sent": 713674,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/ped_c.glb.tex2.ogb",
+    "status": 200,
+    "raw": 1274921,
+    "sent": 1134666,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/ped_c.glb.lod0-0-1-0.ogb",
+    "status": 200,
+    "raw": 28511,
+    "sent": 24522,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/ped_c.glb.lod0-0-1-1.ogb",
+    "status": 200,
+    "raw": 50473,
+    "sent": 42903,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/ped_c.glb.lod0-0-1-2.ogb",
+    "status": 200,
+    "raw": 21555,
+    "sent": 18227,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/ped_c.glb.lod0-0-2-0.ogb",
+    "status": 200,
+    "raw": 10075,
+    "sent": 9157,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/ped_c.glb.lod0-0-2-1.ogb",
+    "status": 200,
+    "raw": 19039,
+    "sent": 17232,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/ped_c.glb.lod0-0-2-2.ogb",
+    "status": 200,
+    "raw": 7880,
+    "sent": 6828,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/stall.glb.ogb",
+    "status": 200,
+    "raw": 4644080,
+    "sent": 3796745,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/stall.glb.tex0.ogb",
+    "status": 200,
+    "raw": 184061,
+    "sent": 184066,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/stall.glb.tex1.ogb",
+    "status": 200,
+    "raw": 1151740,
+    "sent": 987603,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/stall.glb.tex2.ogb",
+    "status": 200,
+    "raw": 1325346,
+    "sent": 1188997,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/stall.glb.lod0-0-1-0.ogb",
+    "status": 200,
+    "raw": 84158,
+    "sent": 79483,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/stall.glb.lod0-0-1-1.ogb",
+    "status": 200,
+    "raw": 177514,
+    "sent": 141756,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/stall.glb.lod0-0-1-2.ogb",
+    "status": 200,
+    "raw": 62111,
+    "sent": 50633,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/stall.glb.lod0-0-2-0.ogb",
+    "status": 200,
+    "raw": 32647,
+    "sent": 28705,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/stall.glb.lod0-0-2-1.ogb",
+    "status": 200,
+    "raw": 61170,
+    "sent": 52995,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/stall.glb.lod0-0-2-2.ogb",
+    "status": 200,
+    "raw": 24309,
+    "sent": 23080,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/textures/brushed_concrete_arm_1k.jpg.ogb",
+    "status": 200,
+    "raw": 1253800,
+    "sent": 1062356,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/textures/brushed_concrete_diff_1k.jpg.ogb",
+    "status": 200,
+    "raw": 156170,
+    "sent": 156175,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/textures/brushed_concrete_nor_gl_1k.jpg.ogb",
+    "status": 200,
+    "raw": 1121400,
+    "sent": 1047006,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/textures/cobblestone_01_arm_1k.jpg.ogb",
+    "status": 200,
+    "raw": 1088891,
+    "sent": 943063,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/textures/cobblestone_01_diff_1k.jpg.ogb",
+    "status": 200,
+    "raw": 170633,
+    "sent": 170638,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/textures/cobblestone_01_nor_gl_1k.jpg.ogb",
+    "status": 200,
+    "raw": 1168348,
+    "sent": 1043351,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/textures/signs/bowl.png.ogb",
+    "status": 200,
+    "raw": 32311,
+    "sent": 31878,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/textures/signs/chevrons.png.ogb",
+    "status": 200,
+    "raw": 53018,
+    "sent": 52554,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/textures/signs/ring.png.ogb",
+    "status": 200,
+    "raw": 43072,
+    "sent": 42504,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/textures/signs/triangle.png.ogb",
+    "status": 200,
+    "raw": 23457,
+    "sent": 22990,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/textures/tower-windows.jpg.ogb",
+    "status": 200,
+    "raw": 102838,
+    "sent": 102843,
+    "encoding": "br"
+  },
+  {
+    "path": "/basis/basis_transcoder.c7e973c188a4.js",
+    "status": 200,
+    "raw": 54574,
+    "sent": 11764,
+    "encoding": "br"
+  },
+  {
+    "path": "/basis/basis_transcoder.f593e2722eb1.wasm",
+    "status": 200,
+    "raw": 519781,
+    "sent": 202266,
+    "encoding": "br"
+  },
+  {
+    "path": "/audio-worklet.d74ed67e3b33.js",
+    "status": 200,
+    "raw": 2015,
+    "sent": 911,
+    "encoding": "br"
+  },
+  {
+    "path": "/audio-decoder.41733dff34d5.js",
+    "status": 200,
+    "raw": 3465,
+    "sent": 1222,
+    "encoding": "br"
+  }
+]

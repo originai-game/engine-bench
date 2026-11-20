@@ -19,7 +19,7 @@ fi
 mkdir -p "$out"
 for engine in ${ENGINES:-origin three}; do
   case $engine in
-    origin) root=origin/night-shift/dist ;;
+    origin) root=origin/the-last-light/dist ;;
     three) root=three/dist ;;
     *) echo "run-all: no engine $engine" >&2; exit 1 ;;
   esac

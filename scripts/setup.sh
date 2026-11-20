@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Installs what the benchmark builds with, all under .tools/ (nothing global):
 # the og launcher and the released engine it runs, KTX-Software 4.4.2 for the
-# KTX2 export, the JavaScript dependencies (bun.lock), and Night Shift's
+# KTX2 export, the JavaScript dependencies (bun.lock), and The Last Light's
 # pinned binary assets.
 set -euo pipefail
 here=$(cd "$(dirname "$0")/.." && pwd)

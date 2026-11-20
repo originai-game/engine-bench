@@ -5,6 +5,14 @@
 //
 //   bun harness/run.ts --engine origin|three --root <dir served> --out <dir>
 //
+//   bun harness/run.ts ... --hold <seconds> [--off clouds,sea,...] [--measure <seconds>]
+//
+// --hold measures one frame instead of the path (the feature section of the
+// README): the camera and the beam held at that path time, automatic
+// quality off at render scale 1, and for Origin the features --off names
+// switched off (origin/the-last-light/src/bench.ts); it writes held.json and
+// held.png.
+//
 // The page is served by harness/serve.ts (brotli-11, COOP/COEP). Chrome runs
 // headed, driven over the DevTools protocol; harness/hook.js is injected
 // into the page and into every Worker before their scripts run.
@@ -12,7 +20,7 @@ import { mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from "nod
 import { tmpdir } from "node:os";
 import { join, resolve } from "node:path";
 import { execSync } from "node:child_process";
-import { PATH_SECONDS } from "../origin/night-shift/src/camera-path.ts";
+import { PATH_SECONDS } from "../origin/the-last-light/src/camera-path.ts";
 
 const arg = (name: string, fallback?: string): string => {
   const i = process.argv.indexOf(`--${name}`);
@@ -27,6 +35,13 @@ const port = Number(arg("port", "8787"));
 const cdpPort = Number(arg("cdp-port", "9333"));
 /** --warmup: load the page to its first frame and stop, writing nothing (see run-all.sh). */
 const warmup = process.argv.includes("--warmup");
+const hold = process.argv.includes("--hold") ? Number(arg("hold")) : undefined;
+const off = process.argv.includes("--off") ? arg("off").split(",").filter(Boolean) : [];
+const MEASURE = Number(arg("measure", "10"));
+/** --video: also capture the path as Chrome presents it (scripts/video.sh); a run for the video, not for the numbers. */
+const video = process.argv.includes("--video");
+/** What the Origin game reads before its first line (src/bench.ts). */
+const CONFIG = hold === undefined ? "" : `globalThis.__benchConfig = ${JSON.stringify({ hold, off, pin: true })};`;
 
 /**
  * What differs per engine: how the camera path is started, the page's mark
@@ -56,6 +71,7 @@ const say = (m: string) => console.error(`run ${engine}: ${m}`);
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 const now = () => performance.timeOrigin + performance.now();
 const HOOK = readFileSync(join(import.meta.dir, "hook.js"), "utf8");
+const INJECT = `${CONFIG}${HOOK}`;
 
 // --- the machine before the run -------------------------------------------
 const sh = (c: string) => { try { return execSync(c, { encoding: "utf8" }).trim(); } catch { return ""; } };
@@ -193,7 +209,7 @@ listeners.push((m) => {
       try {
         await send("Target.setAutoAttach", { autoAttach: true, waitForDebuggerOnStart: true, flatten: true }, sessionId);
         await send("Runtime.enable", {}, sessionId);
-        const r = await send("Runtime.evaluate", { expression: `${HOOK}; typeof GPUCanvasContext + " " + !!globalThis.__bench` }, sessionId);
+        const r = await send("Runtime.evaluate", { expression: `${INJECT}; typeof GPUCanvasContext + " " + !!globalThis.__bench` }, sessionId);
         if (process.env.BENCH_VERBOSE) say(`hook in ${targetInfo.url}: ${r.result?.value ?? JSON.stringify(r.exceptionDetails)}`);
       } finally {
         if (waitingForDebugger) await send("Runtime.runIfWaitingForDebugger", {}, sessionId).catch(() => {});
@@ -209,7 +225,11 @@ const { sessionId: page } = await send("Target.attachToTarget", { targetId: tab.
 await send("Page.enable", {}, page);
 await send("Runtime.enable", {}, page);
 await send("Emulation.setDeviceMetricsOverride", { width: VIEW.width, height: VIEW.height, deviceScaleFactor: VIEW.dpr, mobile: false }, page);
-await send("Page.addScriptToEvaluateOnNewDocument", { source: HOOK }, page);
+await send("Page.addScriptToEvaluateOnNewDocument", { source: INJECT }, page);
+// A returning player who answered "Not now": the Origin shell's install offer
+// (shell/page.ts, its og-install-dismissed key) stays hidden instead of
+// covering the HUD in the frames. three.js's page has no such offer.
+await send("Page.addScriptToEvaluateOnNewDocument", { source: `try { localStorage.setItem("og-install-dismissed", "1"); } catch {}` }, page);
 await send("Target.setAutoAttach", { autoAttach: true, waitForDebuggerOnStart: true, flatten: true }, page);
 
 const console_: string[] = [];
@@ -230,8 +250,41 @@ const evaluate = async (expression: string, sessionId = page): Promise<any> => {
   return r.result.value;
 };
 /** The hook's record in the context that draws (thread-pool Workers parked in Atomics.wait never answer, so only that one is asked). */
-async function record(sid: string): Promise<{ frames: [number, number, number][]; firstAcquire: number; firstDone: number }> {
+async function record(sid: string): Promise<{ frames: [number, number, number][]; firstAcquire: number; firstDone: number; display?: number[][] }> {
   return JSON.parse(await evaluate("JSON.stringify(globalThis.__bench)", sid));
+}
+/**
+ * The share of [from, to] spent at each [render scale, preset steps, scene
+ * width x height], from the page's change rows ([at, tick, scale, steps,
+ * width, height], each in force until the next).
+ */
+function drawnAt(rows: number[][] | undefined, from: number, to: number) {
+  if (!rows?.length) return null;
+  const share = new Map<string, number>();
+  for (let i = 0; i < rows.length; i++) {
+    const start = Math.max(rows[i]![0]!, from);
+    const end = Math.min(rows[i + 1]?.[0] ?? to, to);
+    if (end <= start) continue;
+    const [, , scale, steps, w, h] = rows[i]!;
+    const key = JSON.stringify({ renderScale: Math.round(scale! * 100) / 100, presetSteps: steps, scene: [w, h] });
+    share.set(key, (share.get(key) ?? 0) + (end - start) / (to - from));
+  }
+  return [...share].map(([k, v]) => ({ ...JSON.parse(k), share: Math.round(v * 1000) / 1000 })).sort((a, b) => b.share - a.share);
+}
+// The render scale over the path, by the path's own clock (the tick, 60 a
+// second): each step automatic quality took, the lowest, and how long the
+// path spent below three quarters.
+function scaleTrace(rows: number[][] | undefined, from: number) {
+  if (!rows?.length) return null;
+  const firstTick = rows.find((r) => r[0]! >= from)?.[1] ?? rows[0]![1]!;
+  const pathEnd = firstTick + PATH_SECONDS * 60;
+  const steps = rows.map(([, tick, scale]) => ({ pathSeconds: Math.max(0, Math.round(((tick! - firstTick) / 60) * 100) / 100), renderScale: Math.round(scale! * 100) / 100 }));
+  let below = 0;
+  for (let i = 0; i < rows.length; i++) {
+    const start = Math.max(rows[i]![1]!, firstTick), end = Math.min(rows[i + 1]?.[1] ?? pathEnd, pathEnd);
+    if (end > start && rows[i]![2]! < 0.75 - 1e-6) below += end - start;
+  }
+  return { steps, minRenderScale: Math.min(...steps.map((x) => x.renderScale)), belowThreeQuartersSeconds: Math.round((below / 60) * 10) / 10, belowThreeQuartersShare: Math.round((below / 60 / PATH_SECONDS) * 1000) / 1000 };
 }
 async function screenshot(name: string): Promise<void> {
   const { data } = await send("Page.captureScreenshot", { format: "png" }, page);
@@ -239,7 +292,7 @@ async function screenshot(name: string): Promise<void> {
 }
 
 // --- the run -----------------------------------------------------------------
-const url = `${base}/`;
+const url = engine === "three" && hold !== undefined ? `${base}/?at=${hold}` : `${base}/`;
 say("navigating");
 const navigatedAt = now();
 await send("Page.navigate", { url }, page);
@@ -294,6 +347,21 @@ await sleep(SETTLE * 1000);
 await evaluate("globalThis.__bench.trackDone = false", drawing);
 const servedBeforePath = ((await (await fetch(`${base}/__log`)).json()) as unknown[]).length;
 
+// The video: every frame Chrome presents during the path, as JPEG, with its
+// presentation time (Page.screencastFrame). Capturing costs Chrome a copy and
+// an encode per frame, so a video run's frame times are its own.
+const shots: [number, string][] = [];
+if (video) {
+  mkdirSync(join(out, "video"), { recursive: true });
+  listeners.push((m) => {
+    if (m.method !== "Page.screencastFrame") return;
+    const name = `${String(shots.length).padStart(5, "0")}.jpg`;
+    writeFileSync(join(out, "video", name), Buffer.from(m.params.data, "base64"));
+    shots.push([m.params.metadata.timestamp * 1000, name]);
+    void send("Page.screencastFrameAck", { sessionId: m.params.sessionId }, page).catch(() => {});
+  });
+  await send("Page.startScreencast", { format: "jpeg", quality: 85, maxWidth: VIEW.width * VIEW.dpr, maxHeight: VIEW.height * VIEW.dpr, everyNthFrame: 1 }, page);
+}
 // The path: from the engine's clock 0 to PATH_SECONDS on it.
 say("starting the path");
 const pathAt = now();
@@ -304,14 +372,61 @@ if (profile_.start === "gate") {
 } else {
   await evaluate("window.__benchStart()");
 }
+if (hold !== undefined) {
+  // One held frame: MEASURE seconds of it after three to let it settle
+  // (TAA's history, the pinned render scale): its frame intervals and the
+  // intervals between the GPU finishing one frame and the next
+  // (onSubmittedWorkDone, the hook's trackDone), which is the GPU's time per
+  // frame while the GPU is what limits the frame rate. (IOKit's per-process
+  // GPU time does not count Chrome's GPU process on this Mac.)
+  await evaluate("globalThis.__bench.trackDone = true", drawing);
+  await sleep(3000);
+  const from = now(), g0 = gpuTimes();
+  await sleep(MEASURE * 1000);
+  const to = now(), g1 = gpuTimes();
+  await screenshot("held.png");
+  // A second later, the same camera: what differs is what moves on its own
+  // (the clip, the cloth, the wind, the sea, the beam's haze).
+  await sleep(1000);
+  await screenshot("held-1s.png");
+  const held = (await record(drawing)).frames.filter(([t]) => t >= from && t <= to);
+  const gaps = held.slice(1).map(([t], i) => t - held[i]![0]).sort((a, b) => a - b);
+  const at = (p: number) => gaps[Math.min(gaps.length - 1, Math.floor(p * gaps.length))]!;
+  const done = held.map((f) => f[3]).filter((t) => t > 0);
+  const gpuGaps = done.slice(1).map((t, i) => t - done[i]!).sort((a, b) => a - b);
+  const result = {
+    engine, hold, off, measureSeconds: MEASURE, frames: held.length,
+    medianMs: at(0.5), p95Ms: at(0.95),
+    gpuMsPerFrame: gpuGaps.length ? gpuGaps[Math.floor(gpuGaps.length / 2)]! : null,
+    resolution: held.length ? [held[0]![1], held[0]![2]] : null,
+    drawnAt: drawnAt((await record(drawing)).display, from, to),
+    machine: { loadAverage: machine.loadAverage, loadMax: Math.max(...loadSamples.map(([, l]) => l)), gpuShareBefore: machine.gpuShareBefore, gpuShareDuring: gpuShare(g0, g1, to - from) },
+    chrome: version.Browser, adapter, console: console_,
+  };
+  writeFileSync(join(out, "held.json"), JSON.stringify(result, null, 2) + "\n");
+  console.log(JSON.stringify({ engine, hold, off, medianMs: result.medianMs, gpuMsPerFrame: result.gpuMsPerFrame, frames: held.length }));
+  ws.close();
+  cleanup();
+  await chrome.exited;
+  rmSync(profile, { recursive: true, force: true });
+  process.exit(0);
+}
 let pathEnd = 0;
+/** [wall ms, path seconds] as polled: where on the path the engine was when (video.json). */
+const pathClock: [number, number][] = [];
 while (now() - pathAt < 600_000) {
   const t = Number(await evaluate(profile_.clock));
+  pathClock.push([now(), t]);
   if (t >= PATH_SECONDS) { pathEnd = now(); break; }
   await sleep(10);
 }
 if (!pathEnd) throw new Error("the path did not end in 600 s");
 say(`path done in ${Math.round(pathEnd - pathAt)} ms of wall time`);
+if (video) {
+  await send("Page.stopScreencast", {}, page);
+  writeFileSync(join(out, "video.json"), JSON.stringify({ pathAt, pathEnd, columns: ["presented", "file"], shots, pathClock }) + "\n");
+  say(`video: ${shots.length} frames captured`);
+}
 await sleep(1500);
 // The path ends where it began: the cover shot, the same frame for every engine.
 await screenshot("cover.png");
@@ -352,13 +467,22 @@ const run = {
     meanMs: intervals.reduce((a, b) => a + b, 0) / intervals.length,
     maxMs: sorted[sorted.length - 1],
     resolution: frames.length ? [frames[0]![1], frames[0]![2]] : null,
+    // What the scene was drawn at (the canvas is `resolution`): the share
+    // of the path's time at each render scale and preset step automatic
+    // quality chose, from the page's own record (frames.json `display`);
+    // null for an engine that keeps none (it draws at the canvas's size).
+    drawnAt: drawnAt(drawn.display, pathAt, pathEnd),
+    scaleTrace: scaleTrace(drawn.display, pathAt),
   },
   workers: [...workers.values()].map((w) => w.url),
   console: console_,
 };
 writeFileSync(join(out, "run.json"), JSON.stringify(run, null, 2) + "\n");
 writeFileSync(join(out, "requests.json"), JSON.stringify(served, null, 2) + "\n");
-writeFileSync(join(out, "frames.json"), JSON.stringify({ pathAt, pathEnd, columns: ["acquired", "width", "height", "gpuDone"], frames: drawn.frames }) + "\n");
+writeFileSync(join(out, "frames.json"), JSON.stringify({
+  pathAt, pathEnd, columns: ["acquired", "width", "height", "gpuDone"], frames: drawn.frames,
+  display: drawn.display ? { columns: ["at", "tick", "renderScale", "presetSteps", "sceneWidth", "sceneHeight"], rows: drawn.display } : null,
+}) + "\n");
 console.log(JSON.stringify({ engine, brotliBytes: run.download.brotliBytes, firstFrameMs: Math.round(firstFrame.presentedMs), medianMs: run.frameTime.medianMs, p95Ms: run.frameTime.p95Ms, frames: frames.length, resolution: run.frameTime.resolution }));
 
 ws.close();

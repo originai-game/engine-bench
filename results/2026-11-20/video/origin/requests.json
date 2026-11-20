@@ -1,0 +1,702 @@
+[
+  {
+    "path": "/index.html",
+    "status": 200,
+    "raw": 7135,
+    "sent": 2250,
+    "encoding": "br"
+  },
+  {
+    "path": "/install.7733d381be93.js",
+    "status": 200,
+    "raw": 100,
+    "sent": 71,
+    "encoding": "br"
+  },
+  {
+    "path": "/shell.85aadae1ceae.css",
+    "status": 200,
+    "raw": 9284,
+    "sent": 2223,
+    "encoding": "br"
+  },
+  {
+    "path": "/play.3b4722707f4c.js",
+    "status": 200,
+    "raw": 115256,
+    "sent": 37157,
+    "encoding": "br"
+  },
+  {
+    "path": "/manifest.webmanifest",
+    "status": 200,
+    "raw": 494,
+    "sent": 184,
+    "encoding": "br"
+  },
+  {
+    "path": "/game.ba94691d834f.js",
+    "status": 200,
+    "raw": 506893,
+    "sent": 92403,
+    "encoding": "br"
+  },
+  {
+    "path": "/icons/icon-192.png",
+    "status": 200,
+    "raw": 7992,
+    "sent": 7892,
+    "encoding": "br"
+  },
+  {
+    "path": "/icons/icon-512.png",
+    "status": 200,
+    "raw": 23824,
+    "sent": 22813,
+    "encoding": "br"
+  },
+  {
+    "path": "/origin-engine-lanes.e63adbb6c1de.js",
+    "status": 200,
+    "raw": 444623,
+    "sent": 32758,
+    "encoding": "br"
+  },
+  {
+    "path": "/snippets/wasm-bindgen-rayon-38edf6e439f6d70d/src/workerHelpers.no-bundler.js",
+    "status": 200,
+    "raw": 3618,
+    "sent": 1388,
+    "encoding": "br"
+  },
+  {
+    "path": "/origin-engine-lanes_bg.b6fa8f4ee201.wasm",
+    "status": 200,
+    "raw": 40472170,
+    "sent": 8090559,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/.cook.ogt",
+    "status": 200,
+    "raw": 25824,
+    "sent": 8049,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/fonts/latin/extension.json.ogb",
+    "status": 200,
+    "raw": 480,
+    "sent": 314,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/looks/the-last-light.ogt.ogb",
+    "status": 200,
+    "raw": 846,
+    "sent": 450,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/boulder.glb.ogb",
+    "status": 200,
+    "raw": 1286544,
+    "sent": 1095758,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/boulder.glb.tex0.ogb",
+    "status": 200,
+    "raw": 185687,
+    "sent": 185692,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/boulder.glb.tex2.ogb",
+    "status": 200,
+    "raw": 1301756,
+    "sent": 1200078,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/boulder.glb.lod0-0-1-1.ogb",
+    "status": 200,
+    "raw": 28824,
+    "sent": 28410,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/boulder.glb.tex1.ogb",
+    "status": 200,
+    "raw": 754329,
+    "sent": 668402,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/boulder.glb.lod0-0-1-0.ogb",
+    "status": 200,
+    "raw": 13990,
+    "sent": 13493,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/boulder.glb.lod0-0-1-2.ogb",
+    "status": 200,
+    "raw": 7439,
+    "sent": 6950,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/boulder.glb.lod0-0-2-0.ogb",
+    "status": 200,
+    "raw": 11004,
+    "sent": 10428,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/boulder.glb.lod0-0-2-1.ogb",
+    "status": 200,
+    "raw": 22565,
+    "sent": 21483,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/boulder.glb.lod0-0-2-2.ogb",
+    "status": 200,
+    "raw": 5853,
+    "sent": 5271,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/cottage.glb.ogb",
+    "status": 200,
+    "raw": 3233472,
+    "sent": 2738599,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/cottage.glb.tex0.ogb",
+    "status": 200,
+    "raw": 184914,
+    "sent": 184919,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/cottage.glb.tex1.ogb",
+    "status": 200,
+    "raw": 900762,
+    "sent": 773957,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/cottage.glb.tex2.ogb",
+    "status": 200,
+    "raw": 1343788,
+    "sent": 1238949,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/cottage.glb.lod0-0-1-0.ogb",
+    "status": 200,
+    "raw": 30325,
+    "sent": 26876,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/cottage.glb.lod0-0-1-1.ogb",
+    "status": 200,
+    "raw": 57732,
+    "sent": 50150,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/cottage.glb.lod0-0-1-2.ogb",
+    "status": 200,
+    "raw": 21545,
+    "sent": 18803,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/cottage.glb.lod0-0-2-0.ogb",
+    "status": 200,
+    "raw": 12364,
+    "sent": 11874,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/cottage.glb.lod0-0-2-1.ogb",
+    "status": 200,
+    "raw": 27481,
+    "sent": 26518,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/cottage.glb.lod0-0-2-2.ogb",
+    "status": 200,
+    "raw": 8764,
+    "sent": 8266,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/lantern.glb.ogb",
+    "status": 200,
+    "raw": 132480,
+    "sent": 100307,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/lantern.glb.tex0.ogb",
+    "status": 200,
+    "raw": 12415,
+    "sent": 11925,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/lantern.glb.tex1.ogb",
+    "status": 200,
+    "raw": 78931,
+    "sent": 74879,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/lantern.glb.tex2.ogb",
+    "status": 200,
+    "raw": 68094,
+    "sent": 62461,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/lighthouse.glb.ogb",
+    "status": 200,
+    "raw": 3768368,
+    "sent": 3193751,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/lighthouse.glb.tex0.ogb",
+    "status": 200,
+    "raw": 761327,
+    "sent": 761332,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/lighthouse.glb.tex1.ogb",
+    "status": 200,
+    "raw": 3497950,
+    "sent": 2956540,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/lighthouse.glb.tex2.ogb",
+    "status": 200,
+    "raw": 5335321,
+    "sent": 4724956,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/lighthouse.glb.lod0-0-1-0.ogb",
+    "status": 200,
+    "raw": 86726,
+    "sent": 68641,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/lighthouse.glb.lod0-0-1-1.ogb",
+    "status": 200,
+    "raw": 163415,
+    "sent": 122627,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/lighthouse.glb.lod0-0-1-2.ogb",
+    "status": 200,
+    "raw": 57475,
+    "sent": 44311,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/lighthouse.glb.lod0-0-2-0.ogb",
+    "status": 200,
+    "raw": 39227,
+    "sent": 36849,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/lighthouse.glb.lod0-0-2-1.ogb",
+    "status": 200,
+    "raw": 67734,
+    "sent": 60508,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/lighthouse.glb.lod0-0-2-2.ogb",
+    "status": 200,
+    "raw": 26786,
+    "sent": 24805,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/rock-cliff.glb.ogb",
+    "status": 200,
+    "raw": 4234624,
+    "sent": 3577024,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/rock-cliff.glb.tex0.ogb",
+    "status": 200,
+    "raw": 168188,
+    "sent": 168193,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/rock-cliff.glb.tex1.ogb",
+    "status": 200,
+    "raw": 783412,
+    "sent": 686352,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/rock-cliff.glb.tex2.ogb",
+    "status": 200,
+    "raw": 1351677,
+    "sent": 1253734,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/rock-cliff.glb.lod0-0-1-0.ogb",
+    "status": 200,
+    "raw": 26960,
+    "sent": 23382,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/rock-cliff.glb.lod0-0-1-1.ogb",
+    "status": 200,
+    "raw": 55839,
+    "sent": 46904,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/rock-cliff.glb.lod0-0-1-2.ogb",
+    "status": 200,
+    "raw": 18473,
+    "sent": 15802,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/rock-cliff.glb.lod0-0-2-0.ogb",
+    "status": 200,
+    "raw": 11747,
+    "sent": 11278,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/rock-cliff.glb.lod0-0-2-1.ogb",
+    "status": 200,
+    "raw": 27564,
+    "sent": 26896,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/rock-cliff.glb.lod0-0-2-2.ogb",
+    "status": 200,
+    "raw": 7790,
+    "sent": 7292,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/ruin.glb.ogb",
+    "status": 200,
+    "raw": 2467072,
+    "sent": 2063241,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/ruin.glb.tex0.ogb",
+    "status": 200,
+    "raw": 189821,
+    "sent": 189826,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/ruin.glb.tex1.ogb",
+    "status": 200,
+    "raw": 842574,
+    "sent": 730252,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/ruin.glb.tex2.ogb",
+    "status": 200,
+    "raw": 1331746,
+    "sent": 1213036,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/ruin.glb.lod0-0-2-0.ogb",
+    "status": 200,
+    "raw": 9156,
+    "sent": 8414,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/ruin.glb.lod0-0-2-1.ogb",
+    "status": 200,
+    "raw": 18719,
+    "sent": 17100,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/ruin.glb.lod0-0-2-2.ogb",
+    "status": 200,
+    "raw": 6293,
+    "sent": 5667,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/sea-stack.glb.ogb",
+    "status": 200,
+    "raw": 1063952,
+    "sent": 894125,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/sea-stack.glb.tex0.ogb",
+    "status": 200,
+    "raw": 164379,
+    "sent": 164384,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/sea-stack.glb.tex1.ogb",
+    "status": 200,
+    "raw": 806044,
+    "sent": 718080,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/sea-stack.glb.tex2.ogb",
+    "status": 200,
+    "raw": 1228697,
+    "sent": 1093427,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/sea-stack.glb.lod0-0-2-0.ogb",
+    "status": 200,
+    "raw": 10310,
+    "sent": 9808,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/sea-stack.glb.lod0-0-2-1.ogb",
+    "status": 200,
+    "raw": 24594,
+    "sent": 23432,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/sea-stack.glb.lod0-0-2-2.ogb",
+    "status": 200,
+    "raw": 6268,
+    "sent": 5738,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/wanderer.glb.ogb",
+    "status": 200,
+    "raw": 1424024,
+    "sent": 1189182,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/wanderer.glb.anim.ogb",
+    "status": 200,
+    "raw": 1113579,
+    "sent": 750018,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/wanderer.glb.tex0.ogb",
+    "status": 200,
+    "raw": 182697,
+    "sent": 182702,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/wanderer.glb.tex1.ogb",
+    "status": 200,
+    "raw": 880473,
+    "sent": 756297,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/wanderer.glb.tex2.ogb",
+    "status": 200,
+    "raw": 1276851,
+    "sent": 1138958,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/wanderer.glb.tex3.ogb",
+    "status": 200,
+    "raw": 15980,
+    "sent": 15428,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/wanderer.glb.lod0-0-2-0.ogb",
+    "status": 200,
+    "raw": 14073,
+    "sent": 13558,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/wanderer.glb.lod0-0-2-1.ogb",
+    "status": 200,
+    "raw": 28416,
+    "sent": 27784,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/models/wanderer.glb.lod0-0-2-2.ogb",
+    "status": 200,
+    "raw": 10975,
+    "sent": 10491,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/plants/buttercup.ogt.ogb",
+    "status": 200,
+    "raw": 5369,
+    "sent": 2677,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/plants/foxglove.ogt.ogb",
+    "status": 200,
+    "raw": 18133,
+    "sent": 11438,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/plants/hawthorn.ogt.ogb",
+    "status": 200,
+    "raw": 1336192,
+    "sent": 733747,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/plants/oxeye.ogt.ogb",
+    "status": 200,
+    "raw": 6608,
+    "sent": 3410,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/plants/plume-grass.ogt.ogb",
+    "status": 200,
+    "raw": 36987,
+    "sent": 23260,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/plants/thrift.ogt.ogb",
+    "status": 200,
+    "raw": 7962,
+    "sent": 4200,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/props/staff.ogt.ogb",
+    "status": 200,
+    "raw": 12560,
+    "sent": 6726,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/terrain/coast.ogt.ogb",
+    "status": 200,
+    "raw": 2072757,
+    "sent": 2066374,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/terrain/textures/aerial_grass_rock_diff_1k.jpg.ogb",
+    "status": 200,
+    "raw": 183007,
+    "sent": 183012,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/terrain/textures/aerial_grass_rock_nor_gl_1k.jpg.ogb",
+    "status": 200,
+    "raw": 1376353,
+    "sent": 1185870,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/terrain/textures/forest_ground_04_diff_1k.jpg.ogb",
+    "status": 200,
+    "raw": 173081,
+    "sent": 173086,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/terrain/textures/forest_ground_04_nor_gl_1k.jpg.ogb",
+    "status": 200,
+    "raw": 1395583,
+    "sent": 1275831,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/terrain/textures/rock_face_03_grey_1k.jpg.ogb",
+    "status": 200,
+    "raw": 166108,
+    "sent": 166113,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/terrain/textures/rock_face_03_nor_gl_1k.jpg.ogb",
+    "status": 200,
+    "raw": 1386922,
+    "sent": 1238119,
+    "encoding": "br"
+  },
+  {
+    "path": "/basis/basis_transcoder.c7e973c188a4.js",
+    "status": 200,
+    "raw": 54574,
+    "sent": 11764,
+    "encoding": "br"
+  },
+  {
+    "path": "/basis/basis_transcoder.f593e2722eb1.wasm",
+    "status": 200,
+    "raw": 519781,
+    "sent": 202266,
+    "encoding": "br"
+  },
+  {
+    "path": "/cooked/fonts/latin/NotoSans-Latin.ttf.face.ogb",
+    "status": 200,
+    "raw": 127272,
+    "sent": 56705,
+    "encoding": "br"
+  },
+  {
+    "path": "/audio-worklet.d74ed67e3b33.js",
+    "status": 200,
+    "raw": 2015,
+    "sent": 911,
+    "encoding": "br"
+  },
+  {
+    "path": "/audio-decoder.41733dff34d5.js",
+    "status": 200,
+    "raw": 3465,
+    "sent": 1222,
+    "encoding": "br"
+  }
+]

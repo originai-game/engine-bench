@@ -4,3 +4,8 @@ node_modules/
 three/dist/
 three/public/content/
 three/public/basis/
+# The frames a --video run captured: the mp4s are made from them and kept instead.
+results/*/*/*/video/
+results/*/*/*/pane-*.mp4
+results/*/*/*/*.list
+results/*/*/*/*.ass
